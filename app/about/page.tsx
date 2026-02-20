@@ -65,6 +65,20 @@ export default function About(){
         </Container>
       </section>
 
+      <section>
+        <Container className="py-12">
+          <h2 className="text-2xl font-semibold text-center mb-8">Board of Directors</h2>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto">
+            <BoardMember name="Ryan Morales" title="Board Member" />
+            <BoardMember name="Matt Sanjari" title="Board Member" />
+            <BoardMember name="John Rowan" title="Board Member" />
+            <BoardMember name="Terrence Hayes" title="Board Member" />
+            <BoardMember name="Kristen Rouse" title="Board Member" />
+            <BoardMember name="Loree Sutton" title="Board Member" />
+          </div>
+        </Container>
+      </section>
+
       <section className="bg-slate-50 border-t border-slate-200">
         <Container className="py-12">
           <h2 className="text-2xl font-semibold text-center">Our Values</h2>
@@ -84,6 +98,18 @@ function ValueCard({ title, body }:{ title: string; body: string }){
     <div className="rounded-xl border border-slate-200 bg-white p-6">
       <div className="text-lg font-semibold text-blue-700">{title}</div>
       <p className="mt-2 text-sm text-slate-600">{body}</p>
+    </div>
+  );
+}
+
+function BoardMember({ name, title }:{ name: string; title: string }){
+  return (
+    <div className="rounded-xl border border-slate-200 bg-white p-6 text-center">
+      <div className="w-20 h-20 rounded-full bg-[#4A5D3F] mx-auto mb-4 flex items-center justify-center text-white text-2xl font-bold">
+        {name.split(' ').map(n => n[0]).join('')}
+      </div>
+      <div className="font-semibold text-lg">{name}</div>
+      <div className="text-sm text-slate-600 mt-1">{title}</div>
     </div>
   );
 }
