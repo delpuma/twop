@@ -88,25 +88,27 @@ export default function Admin() {
   return (
     <main>
       <section className="bg-white border-b border-slate-200">
-        <Container className="py-8 flex justify-between items-center">
-          <div>
-            <h1 className="text-3xl font-semibold">Admin Dashboard</h1>
-            <p className="text-sm text-slate-600">{user.email}</p>
+        <Container className="py-6 sm:py-8">
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+            <div>
+              <h1 className="text-2xl sm:text-3xl font-semibold">Admin Dashboard</h1>
+              <p className="text-sm text-slate-600 truncate">{user.email}</p>
+            </div>
+            <button onClick={signOut} className="rounded-md px-4 py-2 border border-slate-300 hover:bg-slate-50 text-sm">
+              Sign Out
+            </button>
           </div>
-          <button onClick={signOut} className="rounded-md px-4 py-2 border border-slate-300 hover:bg-slate-50">
-            Sign Out
-          </button>
         </Container>
       </section>
 
       <section>
         <Container className="py-8">
-          <div className="flex gap-2 border-b border-slate-200 mb-6">
+          <div className="flex gap-2 border-b border-slate-200 mb-6 overflow-x-auto">
             {["overview", "signatures", "sponsors", "volunteers", "contacts", "intakes"].map((v) => (
               <button
                 key={v}
                 onClick={() => setView(v)}
-                className={`px-4 py-2 border-b-2 ${view === v ? "border-blue-700 text-blue-700" : "border-transparent text-slate-600 hover:text-slate-900"}`}
+                className={`px-4 py-2 border-b-2 whitespace-nowrap ${view === v ? "border-blue-700 text-blue-700" : "border-transparent text-slate-600 hover:text-slate-900"}`}
               >
                 {v.charAt(0).toUpperCase() + v.slice(1)}
               </button>
@@ -114,7 +116,7 @@ export default function Admin() {
           </div>
 
           {view === "overview" && (
-            <div className="grid gap-4 md:grid-cols-3">
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               <Stat label="Signatures" value={data.sigs?.length || 0} onClick={() => setView("signatures")} />
               <Stat label="Sponsor Leads" value={data.sponsors?.length || 0} onClick={() => setView("sponsors")} />
               <Stat label="Volunteers" value={data.vols?.length || 0} onClick={() => setView("volunteers")} />
@@ -222,11 +224,11 @@ function Table({ title, columns, rows }: { title: string; columns: string[]; row
     <div>
       <h2 className="text-xl font-semibold mb-4">{title} ({rows.length})</h2>
       <div className="overflow-x-auto rounded-xl border border-slate-200">
-        <table className="w-full text-sm">
+        <table className="w-full text-sm min-w-max">
           <thead className="bg-slate-50 border-b border-slate-200">
             <tr>
               {columns.map((col, i) => (
-                <th key={i} className="px-4 py-3 text-left font-semibold text-slate-700">{col}</th>
+                <th key={i} className="px-3 py-3 text-left font-semibold text-slate-700 whitespace-nowrap">{col}</th>
               ))}
             </tr>
           </thead>
@@ -234,7 +236,7 @@ function Table({ title, columns, rows }: { title: string; columns: string[]; row
             {rows.map((row, i) => (
               <tr key={i} className="border-b border-slate-100 hover:bg-slate-50">
                 {row.map((cell, j) => (
-                  <td key={j} className="px-4 py-3 text-slate-700">{cell}</td>
+                  <td key={j} className="px-3 py-3 text-slate-700 max-w-xs truncate" title={cell}>{cell}</td>
                 ))}
               </tr>
             ))}
