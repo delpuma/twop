@@ -26,15 +26,15 @@ export default function Donate(){
             />
             <CampaignCard
               title="Victory Pointe - Clermont"
-              goal="$85,000"
-              description="11-station veteran fitness corridor + intake center. Memorial + community impact for Clermont, FL."
+              goal="$3M private + $3M public"
+              description="11-station veteran fitness corridor + intake center. $3M private fundraising goal matched by $3M in public partnership funding."
               raised="$0"
               highlight
             />
             <CampaignCard
               title="Wash Bus Project"
-              goal="$25,000"
-              description="Mobile shower and laundry services for homeless veterans. Urgent need - launching Q2 2025."
+              goal="$125,000 per bus"
+              description="Mobile shower and laundry services for homeless veterans. Each fully-equipped bus costs $125,000."
               raised="$0"
               urgent
             />
