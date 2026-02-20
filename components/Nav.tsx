@@ -21,7 +21,7 @@ export default function Nav() {
     <header className="border-b-2 border-[#4A5D3F] bg-white/95 backdrop-blur sticky top-0 z-50 shadow-sm">
       <Container className="flex items-center justify-between py-2 gap-3">
         <Link href="/" className="no-underline flex items-center">
-          <Image src="/images/WOPLogo.png" alt="TWOP Logo" width={80} height={80} className="object-contain" />
+          <Image src="/images/WOPLogo.png" alt="TWOP Logo" width={240} height={240} className="object-contain" />
         </Link>
         <nav className="hidden lg:flex gap-5 text-sm">
           {links.map((l) => (
