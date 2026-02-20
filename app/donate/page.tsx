@@ -8,8 +8,9 @@ export default function Donate(){
         <Container className="py-14">
           <h1 className="text-4xl font-semibold tracking-tight">Support Our Mission</h1>
           <p className="mt-4 max-w-3xl text-slate-700 leading-relaxed">
-            Your donation helps stabilize veterans through housing support, healthcare navigation, and workforce pathways.
-            Every contribution makes a direct impact on veterans' lives.
+            We are a non-profit 501(c)(3). Any contributions to the Warrior Outreach Project are fully tax-deductible
+            under current law. When we say bring every man home, we mean it — every vet deserves a good home and a
+            decent quality of life after serving our great country.
           </p>
         </Container>
       </section>
@@ -53,8 +54,8 @@ export default function Donate(){
                 <div className="bg-slate-50 p-4 rounded-lg">
                   <p className="font-mono text-sm">
                     The Warrior Outreach Project<br/>
-                    [Staten Island Mailbox Address]<br/>
-                    Staten Island, NY
+                    567 Tompkins Ave Unit 50427<br/>
+                    Staten Island, NY 10305
                   </p>
                 </div>
               </div>
@@ -82,7 +83,7 @@ export default function Donate(){
 
             <div className="mt-8 text-center text-sm text-slate-600">
               <p>The Warrior Outreach Project is a 501(c)(3) nonprofit organization.</p>
-              <p className="mt-1">All donations are tax-deductible to the extent allowed by law.</p>
+              <p className="mt-1">All contributions are fully tax-deductible under current law.</p>
             </div>
           </div>
         </Container>

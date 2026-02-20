@@ -30,7 +30,8 @@ export default function Footer() {
             <p className="text-xs leading-relaxed">
               info@thewarrioroutreachproject.org<br/>
               (212) 729-0453<br/><br/>
-              <span className="font-medium">NYC & Clermont, FL</span><br/>
+              <span className="font-medium">567 Tompkins Ave Unit 50427</span><br/>
+              Staten Island, NY 10305<br/><br/>
               Expanding across the East Coast
             </p>
           </div>
