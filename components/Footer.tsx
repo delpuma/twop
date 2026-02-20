@@ -15,13 +15,13 @@ export default function Footer() {
             </p>
           </div>
           <div>
-            <div className="font-semibold text-slate-900">Resources</div>
+            <div className="font-semibold text-slate-900">Quick Links</div>
             <ul className="mt-2 space-y-1">
+              <li><Link href="/about">About</Link></li>
+              <li><Link href="/programs">Programs</Link></li>
+              <li><Link href="/resources">Veteran Resources</Link></li>
               <li><Link href="/city-briefing">City Briefing</Link></li>
               <li><Link href="/dashboard">Impact Dashboard</Link></li>
-              <li><Link href="/letters">Letter Templates</Link></li>
-              <li><Link href="/legal/privacy">Privacy</Link></li>
-              <li><Link href="/legal/terms">Terms</Link></li>
             </ul>
           </div>
           <div>
