@@ -71,10 +71,10 @@ export default function About(){
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto">
             <BoardMember name="Ryan Morales" title="Board Member" />
             <BoardMember name="Matt Sanjari" title="Board Member" />
-            <BoardMember name="John Rowan" title="Board Member" />
-            <BoardMember name="Terrence Hayes" title="Board Member" />
-            <BoardMember name="Kristen Rouse" title="Board Member" />
-            <BoardMember name="Loree Sutton" title="Board Member" />
+            <BoardMember name="Chris Fabiano" title="Founder / President / CEO" photo="/images/board/chris.jpg" />
+            <BoardMember name="Francisco" title="Secretary" photo="/images/board/francisco.jpg" />
+            <BoardMember name="Nicholas Moroz" title="Director of Technology" />
+            <BoardMember name="Ernest" title="Team Member" />
           </div>
         </Container>
       </section>
@@ -102,12 +102,16 @@ function ValueCard({ title, body }:{ title: string; body: string }){
   );
 }
 
-function BoardMember({ name, title }:{ name: string; title: string }){
+function BoardMember({ name, title, photo }:{ name: string; title: string; photo?: string }){
   return (
     <div className="rounded-xl border border-slate-200 bg-white p-6 text-center">
-      <div className="w-20 h-20 rounded-full bg-[#4A5D3F] mx-auto mb-4 flex items-center justify-center text-white text-2xl font-bold">
-        {name.split(' ').map(n => n[0]).join('')}
-      </div>
+      {photo ? (
+        <img src={photo} alt={name} className="w-20 h-20 rounded-full mx-auto mb-4 object-cover object-top" />
+      ) : (
+        <div className="w-20 h-20 rounded-full bg-[#4A5D3F] mx-auto mb-4 flex items-center justify-center text-white text-2xl font-bold">
+          {name.split(' ').map(n => n[0]).join('')}
+        </div>
+      )}
       <div className="font-semibold text-lg">{name}</div>
       <div className="text-sm text-slate-600 mt-1">{title}</div>
     </div>
