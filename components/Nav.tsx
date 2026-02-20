@@ -1,10 +1,8 @@
+"use client";
+import { useState } from "react";
 import Link from "next/link";
 import Container from "./Container";
 import Image from "next/image";
-
-export default function Nav() {
-"use client";
-import { useState } from "react";
 
 const links = [
   { href: "/about", label: "About" },
