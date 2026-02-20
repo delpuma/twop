@@ -73,8 +73,8 @@ export default function About(){
             <BoardMember name="Matt Sanjari" title="Board Member" />
             <BoardMember name="Chris Fabiano" title="Founder / President / CEO" photo="/images/board/chris.jpg" />
             <BoardMember name="Francisco" title="Secretary" photo="/images/board/francisco.jpg" />
-            <BoardMember name="Nicholas Moroz" title="Director of Technology" />
-            <BoardMember name="Ernest" title="Team Member" />
+            <BoardMember name="Nicholas Moroz" title="Director of Technology" photo="/images/board/nicholas.jpg" />
+            <BoardMember name="Ernest" title="Team Member" photo="/images/board/ernest.jpg" />
           </div>
         </Container>
       </section>
