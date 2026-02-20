@@ -106,7 +106,7 @@ function BoardMember({ name, title, photo }:{ name: string; title: string; photo
   return (
     <div className="rounded-xl border border-slate-200 bg-white p-6 text-center">
       {photo ? (
-        <img src={photo} alt={name} className="w-20 h-20 rounded-full mx-auto mb-4 object-cover object-top" />
+        <img src={photo} alt={name} className="w-20 h-20 rounded-full mx-auto mb-4 object-cover" style={{objectPosition: 'center 15%'}} />
       ) : (
         <div className="w-20 h-20 rounded-full bg-[#4A5D3F] mx-auto mb-4 flex items-center justify-center text-white text-2xl font-bold">
           {name.split(' ').map(n => n[0]).join('')}
