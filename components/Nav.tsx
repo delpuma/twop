@@ -18,11 +18,10 @@ const links = [
 export default function Nav() {
   const [open, setOpen] = useState(false);
   return (
-    <header className="border-b border-slate-200 bg-white/90 backdrop-blur sticky top-0 z-50">
-      <Container className="flex items-center justify-between py-3 gap-3">
-        <Link href="/" className="no-underline flex items-center gap-3">
-          <Image src="/images/WOPLogo.png" alt="TWOP Logo" width={50} height={50} className="object-contain" />
-          <span className="font-semibold tracking-tight">The Warrior Outreach Project</span>
+    <header className="border-b-2 border-[#4A5D3F] bg-white/95 backdrop-blur sticky top-0 z-50 shadow-sm">
+      <Container className="flex items-center justify-between py-2 gap-3">
+        <Link href="/" className="no-underline flex items-center">
+          <Image src="/images/WOPLogo.png" alt="TWOP Logo" width={80} height={80} className="object-contain" />
         </Link>
         <nav className="hidden lg:flex gap-5 text-sm">
           {links.map((l) => (
@@ -32,7 +31,7 @@ export default function Nav() {
           ))}
         </nav>
         <div className="flex gap-2 items-center">
-          <Link href="/donate" className="no-underline rounded-md px-3 py-2 text-sm bg-slate-900 text-white hover:bg-slate-800">
+          <Link href="/donate" className="no-underline rounded-md px-4 py-2 text-sm font-medium bg-[#4A5D3F] text-white hover:bg-[#3d4d34] transition-colors">
             Donate
           </Link>
           <button onClick={() => setOpen(!open)} className="lg:hidden p-2" aria-label="Menu">

@@ -32,14 +32,15 @@ export default function Admin() {
   }, []);
 
   async function loadData() {
-    const [sigs, sponsors, vols, contacts, intakes] = await Promise.all([
+    const [sigs, sponsors, vols, contacts, intakes, partners] = await Promise.all([
       supabase.from("signatures").select("*").order("created_at", { ascending: false }),
       supabase.from("sponsor_leads").select("*").order("created_at", { ascending: false }),
       supabase.from("volunteers").select("*").order("created_at", { ascending: false }),
       supabase.from("contact_messages").select("*").order("created_at", { ascending: false }),
-      supabase.from("intake_requests").select("*").order("created_at", { ascending: false })
+      supabase.from("intake_requests").select("*").order("created_at", { ascending: false }),
+      supabase.from("partners").select("*").order("display_order", { ascending: true })
     ]);
-    setData({ sigs: sigs.data || [], sponsors: sponsors.data || [], vols: vols.data || [], contacts: contacts.data || [], intakes: intakes.data || [] });
+    setData({ sigs: sigs.data || [], sponsors: sponsors.data || [], vols: vols.data || [], contacts: contacts.data || [], intakes: intakes.data || [], partners: partners.data || [] });
   }
 
   async function signIn(e: React.FormEvent) {
@@ -104,11 +105,11 @@ export default function Admin() {
       <section>
         <Container className="py-8">
           <div className="flex gap-2 border-b border-slate-200 mb-6 overflow-x-auto">
-            {["overview", "signatures", "sponsors", "volunteers", "contacts", "intakes"].map((v) => (
+            {["overview", "signatures", "sponsors", "volunteers", "contacts", "intakes", "partners"].map((v) => (
               <button
                 key={v}
                 onClick={() => setView(v)}
-                className={`px-4 py-2 border-b-2 whitespace-nowrap ${view === v ? "border-blue-700 text-blue-700" : "border-transparent text-slate-600 hover:text-slate-900"}`}
+                className={`px-4 py-2 border-b-2 whitespace-nowrap ${view === v ? "border-[#4A5D3F] text-[#4A5D3F]" : "border-transparent text-slate-600 hover:text-slate-900"}`}
               >
                 {v.charAt(0).toUpperCase() + v.slice(1)}
               </button>
@@ -122,6 +123,7 @@ export default function Admin() {
               <Stat label="Volunteers" value={data.vols?.length || 0} onClick={() => setView("volunteers")} />
               <Stat label="Contact Messages" value={data.contacts?.length || 0} onClick={() => setView("contacts")} />
               <Stat label="Intake Requests" value={data.intakes?.length || 0} onClick={() => setView("intakes")} />
+              <Stat label="Partners" value={data.partners?.length || 0} onClick={() => setView("partners")} />
             </div>
           )}
 
@@ -204,6 +206,8 @@ export default function Admin() {
               ])}
             />
           )}
+
+          {view === "partners" && <PartnersManager data={data.partners} onUpdate={loadData} />}
         </Container>
       </section>
     </main>
@@ -242,6 +246,78 @@ function Table({ title, columns, rows }: { title: string; columns: string[]; row
             ))}
           </tbody>
         </table>
+      </div>
+    </div>
+  );
+}
+
+function PartnersManager({ data, onUpdate }: { data: any[]; onUpdate: () => void }) {
+  const [form, setForm] = useState({ name: "", logo_url: "", website: "", description: "", display_order: 0 });
+  const [editing, setEditing] = useState<number | null>(null);
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    if (editing) {
+      await supabase.from("partners").update(form).eq("id", editing);
+      setEditing(null);
+    } else {
+      await supabase.from("partners").insert([{ ...form, is_active: true }]);
+    }
+    setForm({ name: "", logo_url: "", website: "", description: "", display_order: 0 });
+    onUpdate();
+  }
+
+  async function handleDelete(id: number) {
+    if (confirm("Delete this partner?")) {
+      await supabase.from("partners").delete().eq("id", id);
+      onUpdate();
+    }
+  }
+
+  async function toggleActive(id: number, isActive: boolean) {
+    await supabase.from("partners").update({ is_active: !isActive }).eq("id", id);
+    onUpdate();
+  }
+
+  function startEdit(partner: any) {
+    setForm({ name: partner.name, logo_url: partner.logo_url, website: partner.website, description: partner.description, display_order: partner.display_order });
+    setEditing(partner.id);
+  }
+
+  return (
+    <div>
+      <h2 className="text-xl font-semibold mb-4">Partners & Sponsors ({data.length})</h2>
+      
+      <form onSubmit={handleSubmit} className="mb-6 p-4 rounded-xl border border-slate-200 bg-slate-50">
+        <h3 className="font-semibold mb-3">{editing ? "Edit Partner" : "Add New Partner"}</h3>
+        <div className="grid gap-3 sm:grid-cols-2">
+          <input type="text" placeholder="Partner Name" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} className="rounded-md border border-slate-300 px-3 py-2" required />
+          <input type="url" placeholder="Logo URL" value={form.logo_url} onChange={(e) => setForm({ ...form, logo_url: e.target.value })} className="rounded-md border border-slate-300 px-3 py-2" required />
+          <input type="url" placeholder="Website (optional)" value={form.website} onChange={(e) => setForm({ ...form, website: e.target.value })} className="rounded-md border border-slate-300 px-3 py-2" />
+          <input type="number" placeholder="Display Order" value={form.display_order} onChange={(e) => setForm({ ...form, display_order: parseInt(e.target.value) })} className="rounded-md border border-slate-300 px-3 py-2" />
+        </div>
+        <textarea placeholder="Description (optional)" value={form.description} onChange={(e) => setForm({ ...form, description: e.target.value })} className="w-full mt-3 rounded-md border border-slate-300 px-3 py-2" rows={2} />
+        <div className="flex gap-2 mt-3">
+          <button type="submit" className="rounded-md px-4 py-2 bg-[#4A5D3F] text-white hover:bg-[#3d4d34]">{editing ? "Update" : "Add"} Partner</button>
+          {editing && <button type="button" onClick={() => { setEditing(null); setForm({ name: "", logo_url: "", website: "", description: "", display_order: 0 }); }} className="rounded-md px-4 py-2 border border-slate-300 hover:bg-slate-50">Cancel</button>}
+        </div>
+      </form>
+
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {data.map((p: any) => (
+          <div key={p.id} className="rounded-xl border border-slate-200 p-4 bg-white">
+            <img src={p.logo_url} alt={p.name} className="h-16 w-auto object-contain mb-3" />
+            <h4 className="font-semibold">{p.name}</h4>
+            {p.website && <a href={p.website} target="_blank" rel="noopener noreferrer" className="text-xs text-blue-600 hover:underline block truncate">{p.website}</a>}
+            {p.description && <p className="text-sm text-slate-600 mt-2">{p.description}</p>}
+            <div className="flex gap-2 mt-3 text-sm">
+              <button onClick={() => startEdit(p)} className="text-blue-600 hover:underline">Edit</button>
+              <button onClick={() => toggleActive(p.id, p.is_active)} className="text-slate-600 hover:underline">{p.is_active ? "Hide" : "Show"}</button>
+              <button onClick={() => handleDelete(p.id)} className="text-red-600 hover:underline">Delete</button>
+            </div>
+            <div className="text-xs text-slate-500 mt-2">Order: {p.display_order} • {p.is_active ? "Active" : "Hidden"}</div>
+          </div>
+        ))}
       </div>
     </div>
   );

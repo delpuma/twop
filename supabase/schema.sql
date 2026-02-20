@@ -74,3 +74,15 @@ create table if not exists letters (
 -- STORAGE NOTE:
 -- Create a storage bucket named: letters
 -- If you want public URLs to work, set bucket visibility to public, or replace getPublicUrl usage with signed URLs.
+
+-- PARTNERS / SPONSORS
+create table if not exists partners (
+  id bigint generated always as identity primary key,
+  created_at timestamp with time zone default now(),
+  name text not null,
+  logo_url text not null,
+  website text default '',
+  description text default '',
+  display_order int default 0,
+  is_active boolean default true
+);

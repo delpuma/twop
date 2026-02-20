@@ -1,5 +1,6 @@
 
 import Container from "../components/Container";
+import Partners from "../components/Partners";
 import Link from "next/link";
 
 export default function Home(){
@@ -13,10 +14,10 @@ export default function Home(){
             strengthening the Clermont community through service and resilience.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <Link href="/victory-pointe" className="no-underline rounded-md px-4 py-2 bg-blue-700 text-white hover:bg-blue-600">
+            <Link href="/victory-pointe" className="no-underline rounded-md px-4 py-2 bg-[#4A5D3F] text-white hover:bg-[#3d4d34] font-medium">
               Sign Support for Victory Pointe
             </Link>
-            <Link href="/sponsor" className="no-underline rounded-md px-4 py-2 border border-slate-300 hover:bg-slate-50">
+            <Link href="/sponsor" className="no-underline rounded-md px-4 py-2 border-2 border-[#4A5D3F] text-[#4A5D3F] hover:bg-[#4A5D3F] hover:text-white font-medium transition-colors">
               Sponsor a Station
             </Link>
             <Link href="/get-help" className="no-underline rounded-md px-4 py-2 border border-slate-300 hover:bg-slate-50">
@@ -31,6 +32,8 @@ export default function Home(){
           </div>
         </Container>
       </section>
+
+      <Partners />
 
       <section>
         <Container className="py-14">
