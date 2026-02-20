@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Container from "../../components/Container";
 import SignatureForm from "../../components/SignatureForm";
+import ProposalSlider from "../../components/ProposalSlider";
 
 type Stats = { supporters: number; sponsors: number; pledged: number; letters: number };
 
@@ -67,6 +68,8 @@ export default function VictoryPointe(){
           </div>
         </Container>
       </section>
+
+      <ProposalSlider />
 
       <section>
         <Container className="py-12">
