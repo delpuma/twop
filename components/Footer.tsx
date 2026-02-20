@@ -7,13 +7,10 @@ export default function Footer() {
   return (
     <footer className="border-t border-slate-200 mt-16 bg-white">
       <Container className="py-10 text-sm text-slate-600">
-        <div className="grid gap-8 md:grid-cols-4">
+        <div className="grid gap-8 md:grid-cols-3">
           <div className="flex flex-col items-center md:items-start">
             <Image src="/images/WOPLogo.png" alt="TWOP Logo" width={318} height={68} className="object-contain" />
-          </div>
-          <div>
-            <div className="font-semibold text-slate-900 mb-3">About</div>
-            <p className="text-xs leading-relaxed">
+            <p className="mt-4 text-xs leading-relaxed text-center md:text-left">
               Housing, training, healthcare navigation, and community resilience support — helping veterans
               stabilize and move toward independence.
             </p>
