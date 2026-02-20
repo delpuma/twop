@@ -1,6 +1,6 @@
-
 import { NextResponse } from "next/server";
 import { supabaseServer } from "@/lib/supabaseServer";
+import { sendEmail } from "@/lib/email";
 
 export async function POST(req: Request) {
   const body = await req.json().catch(() => null);
@@ -18,5 +18,9 @@ export async function POST(req: Request) {
     message: String(body.message || "")
   });
   if (error) return NextResponse.json({ ok: false, error: error.message }, { status: 500 });
+  await sendEmail(
+    `New Sponsor Interest: ${body.orgName}`,
+    `Org: ${body.orgName}\nContact: ${body.contact}\nEmail: ${body.email}\nPhone: ${body.phone || "—"}\nInterest: ${body.interest}\nPledge: $${body.pledgedAmount || 0}\n\n${body.message || ""}`
+  ).catch(() => {});
   return NextResponse.json({ ok: true });
 }
