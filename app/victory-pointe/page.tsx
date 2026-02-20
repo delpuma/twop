@@ -22,10 +22,9 @@ export default function VictoryPointe(){
     <div>
       <section className="bg-white border-b border-slate-200">
         <Container className="py-14">
-          <h1 className="text-4xl font-semibold tracking-tight">Victory Pointe Veteran Fitness & Support Initiative</h1>
+          <h1 className="text-4xl font-semibold tracking-tight">Victory Pointe Veteran Fitness &amp; Support Initiative</h1>
           <p className="mt-4 max-w-3xl text-slate-700 leading-relaxed">
-            An 11-station Veteran Fitness & Memorial Corridor paired with a veteran intake and workforce pathway — designed to honor service, strengthen Clermont,
-            and build measurable community impact.
+            A public-private partnership proposal for the City of Clermont, Florida — creating a nationally distinctive Veteran Fitness &amp; Memorial Corridor at Victory Pointe that honors service, activates public space, and builds measurable community impact.
           </p>
 
           <div className="mt-8 grid gap-4 md:grid-cols-4">
@@ -39,11 +38,13 @@ export default function VictoryPointe(){
             <div className="rounded-xl border border-slate-200 bg-slate-50 p-6">
               <h2 className="text-xl font-semibold">What this creates for Clermont</h2>
               <ul className="mt-4 list-disc pl-5 space-y-2 text-slate-700">
-                <li>11 memorial + fitness stops with QR storytelling honoring local heroes</li>
-                <li>Each station includes two push-up/dip elements (22 total) to reflect the urgency of reducing veteran suicide</li>
+                <li>11 branch-themed fitness stations along the existing Victory Pointe trail</li>
+                <li>Dual push-up/dip stations at each location — 22 total, symbolizing the mission to reduce the 22 veteran suicides per day</li>
+                <li>QR memorial storytelling honoring local veterans at every station</li>
+                <li>A signature Honor Plaza at the final station</li>
                 <li>Uses existing trail, waterfront, and parking — minimal new infrastructure</li>
-                <li>Veteran intake + navigation to connect people to healthcare, housing resources, and workforce pathways</li>
-                <li>Workforce pipeline: construction, repairs, and emergency-response support</li>
+                <li>Veteran Intake &amp; Navigation Office at the existing yellow building at Victory Pointe</li>
+                <li>Workforce pipeline: construction, repairs, skilled trades, and emergency-response support</li>
               </ul>
 
               <div className="mt-6 rounded-lg bg-slate-900 text-white p-4">
@@ -71,14 +72,33 @@ export default function VictoryPointe(){
 
       <ProposalSlider />
 
+      <section className="bg-slate-50 border-y border-slate-200">
+        <Container className="py-12">
+          <h2 className="text-2xl font-semibold">Veteran Intake &amp; Support Hub</h2>
+          <p className="mt-3 text-slate-600 max-w-3xl">
+            At the existing yellow building at Victory Pointe, Warrior Outreach will establish an Intake &amp; Navigation Office to connect veterans to healthcare providers, coordinate housing assistance, facilitate workforce placement, and provide peer support navigation. Our goal is to initially house and support 20–30 veterans locally, expanding as partnerships grow.
+          </p>
+          <div className="mt-8 grid gap-6 md:grid-cols-3">
+            <ProgramCard title="Housing" body="Transitional housing with structured support — designed to move veterans toward independence, not dependency." />
+            <ProgramCard title="Healthcare Navigation" body="Connect to VA benefits, medical care, and mental health support. Remove barriers. Reduce red tape." />
+            <ProgramCard title="Workforce Pathways" body="Construction, skilled trades, disaster response, hospitality (IG Hotels), and a pathway to small business ownership." />
+          </div>
+        </Container>
+      </section>
+
       <section>
         <Container className="py-12">
-          <h2 className="text-2xl font-semibold">Project visuals</h2>
-          <p className="mt-2 text-slate-600">Add park photos and station renders in <code className="bg-slate-100 px-1 rounded">/public/victory-pointe</code>.</p>
-          <div className="mt-6 grid gap-4 md:grid-cols-3">
-            <div className="h-44 bg-slate-100 rounded-xl border border-slate-200" />
-            <div className="h-44 bg-slate-100 rounded-xl border border-slate-200" />
-            <div className="h-44 bg-slate-100 rounded-xl border border-slate-200" />
+          <h2 className="text-2xl font-semibold">Strategic Partnership Model</h2>
+          <p className="mt-3 text-slate-600 max-w-3xl">
+            This initiative is structured as a public-private partnership designed to maximize community impact while responsibly leveraging City participation. Our objective is to multiply the impact of public investment by bringing outside dollars and community ownership into the project.
+          </p>
+          <div className="mt-8 grid gap-4 md:grid-cols-3">
+            <PartnerType label="Local business sponsors" />
+            <PartnerType label="Skilled trades companies" />
+            <PartnerType label="Healthcare partners" />
+            <PartnerType label="Hospitality partners" />
+            <PartnerType label="Community volunteers" />
+            <PartnerType label="Regional philanthropic supporters" />
           </div>
         </Container>
       </section>
@@ -91,6 +111,23 @@ function Kpi({ label, value }:{ label: string; value: string }){
     <div className="rounded-xl border border-slate-200 bg-white p-5">
       <div className="text-xs uppercase tracking-wide text-slate-500">{label}</div>
       <div className="mt-2 text-2xl font-semibold text-slate-900">{value}</div>
+    </div>
+  );
+}
+
+function ProgramCard({ title, body }:{ title: string; body: string }){
+  return (
+    <div className="rounded-xl border border-slate-200 bg-white p-6">
+      <div className="font-semibold text-[#4A5D3F]">{title}</div>
+      <p className="mt-2 text-sm text-slate-600">{body}</p>
+    </div>
+  );
+}
+
+function PartnerType({ label }:{ label: string }){
+  return (
+    <div className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm text-slate-700 flex items-center gap-2">
+      <span className="text-[#4A5D3F] font-bold">✓</span> {label}
     </div>
   );
 }
