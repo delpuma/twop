@@ -1,6 +1,7 @@
 
 import Container from "../components/Container";
 import Partners from "../components/Partners";
+import BranchesSlider from "../components/BranchesSlider";
 import Link from "next/link";
 
 export default function Home(){
@@ -32,6 +33,8 @@ export default function Home(){
           </div>
         </Container>
       </section>
+
+      <BranchesSlider />
 
       <Partners />
 
