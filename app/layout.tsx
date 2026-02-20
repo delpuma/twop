@@ -6,7 +6,10 @@ import AIChat from "../components/AIChat";
 
 export const metadata = {
   title: "The Warrior Outreach Project",
-  description: "Veteran housing, training, and community resilience."
+  description: "Veteran housing, training, and community resilience.",
+  icons: {
+    icon: '/favicon.svg',
+  },
 };
 
 export default function RootLayout({ children }:{ children: React.ReactNode }){
