@@ -9,7 +9,7 @@ export default function Footer() {
       <Container className="py-10 text-sm text-slate-600">
         <div className="grid gap-8 md:grid-cols-4">
           <div className="flex flex-col items-center md:items-start">
-            <Image src="/images/WOPLogo.png" alt="TWOP Logo" width={120} height={120} className="object-contain" />
+            <Image src="/images/WOPLogo.png" alt="TWOP Logo" width={318} height={68} className="object-contain" />
           </div>
           <div>
             <div className="font-semibold text-slate-900 mb-3">About</div>
