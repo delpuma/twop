@@ -1,6 +1,7 @@
 
 "use client";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import Container from "../../components/Container";
 import SignatureForm from "../../components/SignatureForm";
 import ProposalSlider from "../../components/ProposalSlider";
@@ -67,6 +68,18 @@ export default function VictoryPointe(){
               </p>
             </div>
           </div>
+        </Container>
+      </section>
+
+      <section className="bg-[#4A5D3F]">
+        <Container className="py-10 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div>
+            <h2 className="text-xl font-semibold text-white">Submit a Letter of Support</h2>
+            <p className="mt-1 text-sm text-white/80 max-w-xl">Organizations, businesses, and community members can download a template and upload a signed letter — letters are shared with City leadership as part of the proposal.</p>
+          </div>
+          <Link href="/letters" className="shrink-0 rounded-lg bg-white text-[#4A5D3F] font-semibold px-6 py-3 hover:bg-slate-100 transition-colors">
+            Submit a Letter →
+          </Link>
         </Container>
       </section>
 
