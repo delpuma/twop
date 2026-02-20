@@ -1,7 +1,10 @@
-"use client";
-import { useState } from "react";
 import Link from "next/link";
 import Container from "./Container";
+import Image from "next/image";
+
+export default function Nav() {
+"use client";
+import { useState } from "react";
 
 const links = [
   { href: "/about", label: "About" },
@@ -19,8 +22,9 @@ export default function Nav() {
   return (
     <header className="border-b border-slate-200 bg-white/90 backdrop-blur sticky top-0 z-50">
       <Container className="flex items-center justify-between py-3 gap-3">
-        <Link href="/" className="no-underline font-semibold tracking-tight">
-          The Warrior Outreach Project
+        <Link href="/" className="no-underline flex items-center gap-3">
+          <Image src="/images/WOPLogo.png" alt="TWOP Logo" width={50} height={50} className="object-contain" />
+          <span className="font-semibold tracking-tight">The Warrior Outreach Project</span>
         </Link>
         <nav className="hidden lg:flex gap-5 text-sm">
           {links.map((l) => (
