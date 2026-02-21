@@ -112,13 +112,6 @@ function Stat({ label, value, sub }:{ label: string; value: string; sub?: string
     </div>
   );
 }
-  return (
-    <div className="rounded-xl border border-slate-200 bg-white p-5">
-      <div className="text-xs uppercase tracking-wide text-slate-500">{label}</div>
-      <div className="mt-2 font-semibold text-slate-900">{value}</div>
-    </div>
-  );
-}
 
 function Card({ title, body }:{ title: string; body: string }){
   return (
