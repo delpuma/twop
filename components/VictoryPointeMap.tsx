@@ -2,18 +2,19 @@
 import { useEffect, useRef } from "react";
 
 // South Lake Trail corridor — ~1 mile, Clermont FL (Coast 2 Coast Bike Trail)
-// Stations 7–11 are exact GPS coords on the trail. 1–6 extrapolated from trail curve.
+// All points interpolated on real OSM way geometry at exact 1/10-mile intervals
+// Station 10 anchored to confirmed GPS coord; station 11 = building on-site
 const TRAIL: [number, number][] = [
-  [28.5562900212, -81.7639135846], // Station 1
-  [28.5564870771, -81.7647237037], // Station 2
-  [28.5566841329, -81.7655338228], // Station 3
-  [28.5568811887, -81.7663439420], // Station 4
-  [28.5570782446, -81.7671540611], // Station 5
-  [28.5572753004, -81.7679641802], // Station 6
-  [28.5574723562, -81.7687742993], // Station 7
-  [28.5573986084, -81.7698361832], // Station 8
-  [28.5578729074, -81.7702922171], // Station 9
-  [28.5580635238, -81.7712046566], // Station 10
+  [28.5619887282, -81.7581661490], // Station 1
+  [28.5612602928, -81.7595272501], // Station 2
+  [28.5604250696, -81.7608361482], // Station 3
+  [28.5595887657, -81.7621808138], // Station 4
+  [28.5589383662, -81.7636484727], // Station 5
+  [28.5583831039, -81.7651701897], // Station 6
+  [28.5578239982, -81.7666900744], // Station 7
+  [28.5574600634, -81.7681416944], // Station 8
+  [28.5574099293, -81.7697873338], // Station 9
+  [28.5580063000, -81.7711141000], // Station 10
   [28.5581758081, -81.7715010344], // Station 11 — Honor Plaza
 ];
 
@@ -51,7 +52,7 @@ export default function VictoryPointeMap() {
       });
 
       const map = L.map(ref.current!, { scrollWheelZoom: false }).setView(
-        [28.5572, -81.7677], 15
+        [28.5597, -81.7648], 15
       );
       mapRef.current = map;
 
