@@ -32,9 +32,10 @@ export default function Donate(){
               When we say bring every man home, we mean it. Your support funds housing, healthcare, workforce training, and a proposed veteran memorial corridor in Clermont, Florida.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
-              <a href="#campaigns" className="rounded-xl bg-amber-500 text-white font-bold px-8 py-4 hover:bg-amber-400 transition-all hover:scale-105 shadow-lg shadow-amber-500/20">Donate Now →</a>
-              <a href="#mail" className="rounded-xl bg-white/10 border border-white/20 text-white font-bold px-8 py-4 hover:bg-white/20 transition-all">Donate by Check</a>
+              <a href="#mail" className="rounded-xl bg-amber-500 text-white font-bold px-8 py-4 hover:bg-amber-400 transition-all hover:scale-105 shadow-lg shadow-amber-500/20">✉️ Donate by Mail / Check</a>
+              <a href="/victory-pointe#sign" className="rounded-xl bg-white/10 border border-white/20 text-white font-bold px-8 py-4 hover:bg-white/20 transition-all">✍️ Sign the Petition</a>
             </div>
+            <p className="mt-4 text-sm text-white/40">🔒 Online giving coming soon — checks and mail accepted now.</p>
             <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 border-t border-white/10 pt-10">
               {[
                 { value: "$25", label: "Feeds a vet for a week" },
@@ -86,7 +87,7 @@ export default function Donate(){
                   <span className="text-slate-500">Goal</span>
                   <span className="font-bold text-slate-900">$150,000</span>
                 </div>
-                <a href="#mail" className="block text-center rounded-lg bg-[#4A5D3F] text-white font-semibold px-4 py-2.5 hover:bg-[#3a4a30] transition-colors text-sm">Donate to This Fund →</a>
+                <a href="#mail" className="block text-center rounded-lg bg-[#4A5D3F] text-white font-semibold px-4 py-2.5 hover:bg-[#3a4a30] transition-colors text-sm">✉️ Mail a Check →</a>
               </div>
             </div>
 
@@ -103,7 +104,7 @@ export default function Donate(){
                   <span className="text-slate-500">Goal</span>
                   <span className="font-bold text-slate-900">$3M private + $3M public</span>
                 </div>
-                <a href="#mail" className="block text-center rounded-lg bg-[#4A5D3F] text-white font-semibold px-4 py-2.5 hover:bg-[#3a4a30] transition-colors text-sm">Donate to Victory Pointe →</a>
+                <a href="#mail" className="block text-center rounded-lg bg-[#4A5D3F] text-white font-semibold px-4 py-2.5 hover:bg-[#3a4a30] transition-colors text-sm">✉️ Mail a Check →</a>
               </div>
             </div>
 
@@ -120,7 +121,7 @@ export default function Donate(){
                   <span className="text-slate-500">Goal per bus</span>
                   <span className="font-bold text-slate-900">$125,000</span>
                 </div>
-                <a href="#mail" className="block text-center rounded-lg bg-orange-500 text-white font-semibold px-4 py-2.5 hover:bg-orange-600 transition-colors text-sm">Fund a Wash Bus →</a>
+                <a href="#mail" className="block text-center rounded-lg bg-orange-500 text-white font-semibold px-4 py-2.5 hover:bg-orange-600 transition-colors text-sm">✉️ Mail a Check →</a>
               </div>
             </div>
 
