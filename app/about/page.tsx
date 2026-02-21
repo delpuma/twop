@@ -127,16 +127,19 @@ export default function About() {
       </section>
 
       {/* VALUES */}
-      <section className="bg-slate-50 border-b border-slate-200">
-        <Container className="py-14">
-          <div className="text-xs uppercase tracking-widest text-[#4A5D3F] font-semibold mb-2 text-center">What We Stand For</div>
-          <h2 className="text-3xl font-bold text-center mb-10">Our Values</h2>
-          <div className="grid gap-5 md:grid-cols-3">
-            {VALUES.map(({ emoji, title, color, body }) => (
-              <div key={title} className={`rounded-xl border-t-4 ${color} bg-white shadow-sm p-6 hover:shadow-md transition-shadow`}>
-                <div className="text-3xl mb-3">{emoji}</div>
-                <div className="font-bold text-slate-900 mb-2">{title}</div>
-                <p className="text-sm text-slate-600 leading-relaxed">{body}</p>
+      <section className="bg-[#1a2416] border-b border-white/10">
+        <Container className="py-16">
+          <div className="text-xs uppercase tracking-widest text-amber-400 font-semibold mb-2 text-center">What We Stand For</div>
+          <h2 className="text-3xl font-black text-white text-center mb-10">Our Values</h2>
+          <div className="grid gap-4 md:grid-cols-3">
+            {VALUES.map(({ emoji, title, body }) => (
+              <div key={title} className="group relative rounded-2xl bg-white/5 border border-white/10 p-6 hover:border-amber-400/40 hover:bg-white/8 transition-all duration-300 overflow-hidden">
+                <div className="absolute -top-6 -right-6 w-24 h-24 rounded-full bg-amber-500/5 group-hover:bg-amber-500/10 transition-all duration-300" />
+                <div className="relative z-10">
+                  <div className="text-3xl mb-4">{emoji}</div>
+                  <div className="font-bold text-white text-lg mb-2">{title}</div>
+                  <p className="text-sm text-white/60 leading-relaxed">{body}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -144,30 +147,29 @@ export default function About() {
       </section>
 
       {/* TEAM */}
-      <section className="bg-white border-b border-slate-200">
+      <section className="bg-slate-900 border-b border-slate-700">
         <Container className="py-16">
-          <div className="text-xs uppercase tracking-widest text-[#4A5D3F] font-semibold mb-2 text-center">The People Behind the Mission</div>
-          <h2 className="text-3xl font-bold text-center mb-2">Leadership Team</h2>
-          <p className="text-center text-slate-500 text-sm mb-10 max-w-xl mx-auto">A veteran-majority team united by one mission — making sure no one who served is left behind.</p>
+          <div className="text-xs uppercase tracking-widest text-amber-400 font-semibold mb-2 text-center">The People Behind the Mission</div>
+          <h2 className="text-3xl font-black text-white text-center mb-2">Leadership Team</h2>
+          <p className="text-center text-slate-400 text-sm mb-10 max-w-xl mx-auto">A veteran-majority team united by one mission — making sure no one who served is left behind.</p>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto">
             {TEAM.map(m => (
-              <div key={m.name} className="rounded-2xl border border-slate-200 bg-white overflow-hidden hover:border-[#4A5D3F] hover:shadow-lg transition-all group">
-                {/* Card top band */}
-                <div className="h-2 bg-gradient-to-r from-[#4A5D3F] to-[#6b8c5a]" />
+              <div key={m.name} className="group rounded-2xl bg-white/5 border border-white/10 overflow-hidden hover:border-amber-400/40 hover:bg-white/8 transition-all duration-300">
+                <div className="h-1 bg-gradient-to-r from-[#4A5D3F] via-amber-500 to-[#4A5D3F] opacity-60 group-hover:opacity-100 transition-opacity" />
                 <div className="p-6 flex flex-col items-center text-center">
                   {m.photo ? (
-                    <img src={m.photo} alt={m.name} className="w-24 h-24 rounded-full object-cover mb-4 border-4 border-white shadow-md ring-2 ring-[#4A5D3F]/20 group-hover:ring-[#4A5D3F]/50 transition-all" style={{ objectPosition: "center 15%" }} />
+                    <img src={m.photo} alt={m.name} className="w-24 h-24 rounded-full object-cover mb-4 border-2 border-white/10 ring-2 ring-amber-400/20 group-hover:ring-amber-400/50 transition-all" style={{ objectPosition: "center 15%" }} />
                   ) : (
-                    <div className="w-24 h-24 rounded-full mb-4 flex items-center justify-center text-white text-2xl font-black border-4 border-white shadow-md ring-2 ring-[#4A5D3F]/20 bg-gradient-to-br from-[#4A5D3F] to-[#2d3a27]">
+                    <div className="w-24 h-24 rounded-full mb-4 flex items-center justify-center text-white text-2xl font-black border-2 border-white/10 ring-2 ring-amber-400/20 group-hover:ring-amber-400/50 transition-all bg-gradient-to-br from-[#4A5D3F] to-[#2d3a27]">
                       {m.name.split(" ").map(n => n[0]).join("")}
                     </div>
                   )}
-                  <div className="font-bold text-lg text-slate-900">{m.name}</div>
+                  <div className="font-bold text-lg text-white">{m.name}</div>
                   <div className="flex items-center gap-2 mt-1 justify-center flex-wrap">
-                    <span className="text-sm text-[#4A5D3F] font-semibold">{m.title}</span>
-                    {m.vet && <span className="text-xs bg-amber-100 text-amber-700 border border-amber-200 rounded-full px-2 py-0.5 font-semibold">🎖️ Veteran</span>}
+                    <span className="text-sm text-amber-400 font-semibold">{m.title}</span>
+                    {m.vet && <span className="text-xs bg-amber-400/10 text-amber-300 border border-amber-400/20 rounded-full px-2 py-0.5 font-semibold">🎖️ Veteran</span>}
                   </div>
-                  <p className="mt-3 text-sm text-slate-500 leading-relaxed">{m.bio}</p>
+                  <p className="mt-3 text-sm text-slate-400 leading-relaxed">{m.bio}</p>
                 </div>
               </div>
             ))}
