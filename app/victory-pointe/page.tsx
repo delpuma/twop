@@ -177,12 +177,12 @@ export default function VictoryPointe(){
               <div className="font-semibold text-xl mb-1">🏆 Victory Pointe Honor Plaza — Military Working Dog Memorial</div>
               <p className="text-sm text-slate-600 mb-4">Six life-size bronze statues honoring the most legendary Military Working Dogs in American history. Each dog represents a branch of service, a theater of war, and a bond between handler and dog that saved lives. Alongside the memorial: a multi-user fitness structure, reflection seating, and flag feature.</p>
               <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-                <DogCard name="Nemo" branch="U.S. Air Force — Vietnam" img="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Nemo_A534.jpg/400px-Nemo_A534.jpg" summary="Shot through the nose charging an enemy soldier, Nemo crawled back to his wounded handler and lay on top of him to guard him until help arrived. He lost his right eye. His handler earned the Purple Heart and Bronze Star." />
+                <DogCard name="Nemo" branch="U.S. Air Force — Vietnam" img="/NemoMilitarydog.jpeg" summary="Shot through the nose charging an enemy soldier, Nemo crawled back to his wounded handler and lay on top of him to guard him until help arrived. He lost his right eye. His handler earned the Purple Heart and Bronze Star." />
                 <DogCard name="Stubby" branch="U.S. Army — WWI" img="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Sergeant_Stubby.jpg/400px-Sergeant_Stubby.jpg" summary="A stray smuggled to Europe, Stubby served in 17 battles, alerted soldiers to gas attacks, and captured a German spy. He became the first dog to receive a rank — Sergeant — from the U.S. armed forces." />
-                <DogCard name="Lucca" branch="U.S. Marine Corps — Iraq &amp; Afghanistan" img="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Homeward_bound_Lucca_retires_120702-M-KW153-143.jpg/400px-Homeward_bound_Lucca_retires_120702-M-KW153-143.jpg" summary="Led nearly 400 patrols and identified ~40 IEDs over 6 years. Not a single Marine was injured under her watch. She lost her front left leg to a second IED in 2012 and was medically retired a hero." />
-                <DogCard name="Gabe" branch="U.S. Army — Iraq" img="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Gabe_military_working_dog.jpg/400px-Gabe_military_working_dog.jpg" summary="A pound puppy turned war hero. Gabe completed 170 combat patrols and made 26 finds of insurgent explosives and weapons. After retiring, he visited wounded soldiers and children in hospitals." />
+                <DogCard name="Lucca" branch="U.S. Marine Corps — Iraq &amp; Afghanistan" imgPosition="bottom left" img="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Homeward_bound_Lucca_retires_120702-M-KW153-143.jpg/400px-Homeward_bound_Lucca_retires_120702-M-KW153-143.jpg" summary="Led nearly 400 patrols and identified ~40 IEDs over 6 years. Not a single Marine was injured under her watch. She lost her front left leg to a second IED in 2012 and was medically retired a hero." />
+                <DogCard name="Gabe" branch="U.S. Army — Iraq" img="/gabearmydog.webp" summary="A pound puppy turned war hero. Gabe completed 170 combat patrols and made 26 finds of insurgent explosives and weapons. After retiring, he visited wounded soldiers and children in hospitals." />
                 <DogCard name="Chips" branch="U.S. Army — WWII" img="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Chips_the_war_dog_%2837223130705%29.png/400px-Chips_the_war_dog_%2837223130705%29.png" summary="During the invasion of Sicily in 1943, Chips charged an enemy machine gun team firing on his platoon — taking a scalp wound and powder burns — and is credited with saving the lives of his human teammates." />
-                <DogCard name="Cairo" branch="U.S. Navy SEALs" img="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Cairo_SEAL_Team_6_dog.jpg/400px-Cairo_SEAL_Team_6_dog.jpg" summary="The only military dog on Operation Neptune Spear — the mission that killed Osama Bin Laden in May 2011. Cairo secured the perimeter of the compound and was responsible for catching anyone who tried to escape." />
+                <DogCard name="Cairo" branch="U.S. Navy SEALs" img="/cairo.webp" summary="The only military dog on Operation Neptune Spear — the mission that killed Osama Bin Laden in May 2011. Cairo secured the perimeter of the compound and was responsible for catching anyone who tried to escape." />
               </div>
               <div className="mt-6 border-t border-amber-200 pt-4 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
                 <div>
@@ -342,14 +342,14 @@ function EventCard({ day, title, emoji, description }:{ day: string; title: stri
   );
 }
 
-function DogCard({ name, branch, img, summary }:{ name: string; branch: string; img: string; summary: string }){
+function DogCard({ name, branch, img, imgPosition = "center", summary }:{ name: string; branch: string; img: string; imgPosition?: string; summary: string }){
   return (
     <div className="rounded-lg bg-white border border-amber-200 overflow-hidden">
       <div className="relative h-48 bg-amber-50">
         <img
           src={img}
           alt={`${name} — Military Working Dog`}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover" style={{ objectPosition: imgPosition }}
           onError={(e) => { (e.target as HTMLImageElement).style.display='none'; }}
         />
         <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent px-3 py-2">
