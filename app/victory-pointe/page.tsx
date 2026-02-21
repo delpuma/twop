@@ -197,7 +197,7 @@ export default function VictoryPointe(){
             </div>
           </div>
 
-          <div className="mt-10 rounded-xl bg-slate-900 text-white p-6 grid md:grid-cols-5 gap-6">
+          <div className="mt-10 rounded-xl bg-slate-900 text-white p-6 grid md:grid-cols-6 gap-6">
             <div>
               <div className="text-xs uppercase tracking-wide opacity-60">Stations 1–10 Memorials</div>
               <div className="text-2xl font-bold mt-1">$300,000</div>
@@ -219,12 +219,83 @@ export default function VictoryPointe(){
               <div className="text-xs opacity-60 mt-1">Equipment &amp; renovations for veteran intake hub</div>
               <a href="/sponsors" className="mt-2 inline-block rounded-lg bg-white/10 text-white text-xs font-semibold px-3 py-1.5 hover:bg-white/20 transition-colors">Sponsor This →</a>
             </div>
+            <div>
+              <div className="text-xs uppercase tracking-wide opacity-60">QR &amp; VR Education</div>
+              <div className="text-2xl font-bold mt-1">$250,000</div>
+              <div className="text-xs opacity-60 mt-1">Interactive &amp; VR content for all 11 stations</div>
+              <a href="/donate" className="mt-2 inline-block rounded-lg bg-amber-500/80 text-white text-xs font-semibold px-3 py-1.5 hover:bg-amber-500 transition-colors">Donate →</a>
+            </div>
             <div className="flex flex-col justify-center">
               <div className="text-xs uppercase tracking-wide opacity-60">Total Project</div>
-              <div className="text-2xl font-bold mt-1">~$900,000</div>
+              <div className="text-2xl font-bold mt-1">~$1,150,000</div>
               <div className="text-xs opacity-60 mt-1">One sponsor, many, or the whole community</div>
               <a href="/donate" className="mt-3 inline-block rounded-lg bg-white text-slate-900 text-xs font-semibold px-4 py-2 hover:bg-slate-100 transition-colors">Contribute Now →</a>
             </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* QR / VR EDUCATION SECTION */}
+      <section className="bg-slate-900 text-white border-y border-slate-700">
+        <Container className="py-14">
+          <div className="flex items-center gap-3 mb-2">
+            <span className="text-3xl">📱</span>
+            <span className="text-xs uppercase tracking-widest text-amber-400 font-semibold">Interactive Education Initiative</span>
+          </div>
+          <h2 className="text-3xl font-semibold">QR Code &amp; VR Veteran Education Experience</h2>
+          <p className="mt-4 text-slate-300 max-w-3xl leading-relaxed">
+            Every station along the Victory Pointe corridor will feature a weatherproof QR code panel that unlocks an immersive virtual reality and interactive web experience — bringing the stories of local heroes, military history, and veteran service to life for visitors of all ages.
+          </p>
+
+          <div className="mt-8 grid gap-6 md:grid-cols-3">
+            <div className="rounded-xl bg-white/5 border border-white/10 p-6">
+              <div className="text-2xl mb-3">🔍</div>
+              <div className="font-semibold text-white">Scan &amp; Discover</div>
+              <p className="mt-2 text-sm text-slate-400">Visitors scan a QR code at any station and are instantly transported into an interactive experience — veteran stories, branch history, and the mission behind each memorial.</p>
+            </div>
+            <div className="rounded-xl bg-white/5 border border-white/10 p-6">
+              <div className="text-2xl mb-3">🥽</div>
+              <div className="font-semibold text-white">VR-Ready Experiences</div>
+              <p className="mt-2 text-sm text-slate-400">Full 360° virtual reality content built for school field trips and community events. Students can experience what service looks like — from training to deployment to homecoming.</p>
+            </div>
+            <div className="rounded-xl bg-white/5 border border-white/10 p-6">
+              <div className="text-2xl mb-3">🏫</div>
+              <div className="font-semibold text-white">Built for Schools</div>
+              <p className="mt-2 text-sm text-slate-400">Curriculum-aligned content for K–12 students. Teachers can bring classes to Victory Pointe for a living history lesson — each station a chapter, each QR code a gateway to deeper learning.</p>
+            </div>
+          </div>
+
+          <div className="mt-8 grid gap-4 md:grid-cols-2">
+            <div className="rounded-xl bg-amber-500/10 border border-amber-500/30 p-6">
+              <div className="text-xs uppercase tracking-wide text-amber-400 font-semibold mb-1">What Each Station Gets</div>
+              <ul className="mt-3 space-y-2 text-sm text-slate-300">
+                <li className="flex gap-2"><span className="text-amber-400">✓</span> Weatherproof QR panel with branch-specific design</li>
+                <li className="flex gap-2"><span className="text-amber-400">✓</span> Dedicated interactive web page for that station's veteran story</li>
+                <li className="flex gap-2"><span className="text-amber-400">✓</span> 360° VR video content — viewable on phone or VR headset</li>
+                <li className="flex gap-2"><span className="text-amber-400">✓</span> Local hero profiles — Central Florida veterans honored by name</li>
+                <li className="flex gap-2"><span className="text-amber-400">✓</span> School-ready lesson materials linked from each station page</li>
+              </ul>
+            </div>
+            <div className="rounded-xl bg-white/5 border border-white/10 p-6 flex flex-col justify-between">
+              <div>
+                <div className="text-xs uppercase tracking-wide text-slate-400 font-semibold mb-1">Total Initiative Funding Goal</div>
+                <div className="text-4xl font-bold text-amber-400 mt-2">$250,000</div>
+                <p className="mt-3 text-sm text-slate-400">Covers content production, VR development, weatherproof hardware for all 11 stations, hosting infrastructure, and school outreach program launch.</p>
+              </div>
+              <div className="mt-6 flex flex-col sm:flex-row gap-3">
+                <a href="/donate" className="rounded-lg bg-amber-500 text-white text-sm font-semibold px-5 py-3 hover:bg-amber-600 transition-colors text-center">Donate to This Initiative →</a>
+                <a href="/sponsors" className="rounded-lg bg-white/10 text-white text-sm font-semibold px-5 py-3 hover:bg-white/20 transition-colors text-center">Become a Sponsor →</a>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-6 rounded-xl bg-white/5 border border-white/10 p-5 flex flex-col md:flex-row items-start md:items-center gap-4">
+            <div className="text-3xl">🎓</div>
+            <div>
+              <div className="font-semibold text-white">School &amp; Youth Group Partnerships</div>
+              <p className="mt-1 text-sm text-slate-400">We're actively seeking partnerships with Lake County and Clermont-area schools to integrate Victory Pointe into field trip programming. Every child who visits leaves knowing the name of a local hero.</p>
+            </div>
+            <a href="/contact" className="shrink-0 rounded-lg bg-white text-slate-900 text-sm font-semibold px-5 py-2.5 hover:bg-slate-100 transition-colors">Partner With Us →</a>
           </div>
         </Container>
       </section>
