@@ -116,6 +116,17 @@ export default function VictoryPointe(){
             </div>
           </div>
 
+          {/* Crowdfund callout */}
+          <div className="mt-8 rounded-xl border border-[#4A5D3F] bg-[#4A5D3F]/5 p-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+            <div>
+              <div className="font-semibold text-[#4A5D3F] text-lg">You don’t have to sponsor a whole station alone.</div>
+              <p className="mt-1 text-sm text-slate-600 max-w-2xl">Every station and memorial can be community-funded — $25, $100, $500, whatever you can give. When the community comes together, we can build every station without waiting for a single large donor. Every contribution is recognized and every dollar goes directly toward honoring veterans at Victory Pointe.</p>
+            </div>
+            <a href="/donate" className="shrink-0 rounded-lg bg-[#4A5D3F] text-white font-semibold px-6 py-3 hover:bg-[#3a4a30] transition-colors text-sm">
+              Contribute Now →
+            </a>
+          </div>
+
           {/* Station grid */}
           <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             <StationCard num="1" flag="🇺🇸" branch="Army" subtitle="Strength Zone" equipment={["Multi-height pull-up bar system","Dual push-up/dip unit","Optional low crawl lane"]} manufacturer="Outdoor-Fit" />
