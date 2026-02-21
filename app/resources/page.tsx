@@ -76,7 +76,75 @@ export default function Resources(){
               resources={[
                 { name: "Florida Department of Veterans' Affairs", link: "https://floridavets.org/", desc: "State-level veteran services and benefits" },
                 { name: "Lake County Veterans Services", link: "https://www.lakecountyfl.gov/departments/veterans_services/", desc: "Local assistance and support in Lake County" },
-                { name: "Orlando VA Medical Center", link: "https://www.va.gov/orlando-health-care/", desc: "Healthcare services in Central Florida" }
+                { name: "Orlando VA Medical Center", link: "https://www.va.gov/orlando-health-care/", desc: "Healthcare services in Central Florida" },
+                { name: "Clermont Veterans of Foreign Wars — Post 10209", link: "https://www.vfw.org/", desc: "Local VFW post serving Clermont and South Lake County veterans" },
+                { name: "American Legion — Lake County Posts", link: "https://www.legion.org/", desc: "Community support, benefits help, and camaraderie for veterans" },
+                { name: "Volunteers of America Florida", link: "https://www.voaflorida.org/", desc: "Transitional housing and supportive services for homeless veterans in Florida" },
+                { name: "Homeless Veterans Reintegration Program — FL", link: "https://www.dol.gov/agencies/vets/programs/hvrp", desc: "Employment-focused reintegration for homeless veterans in Florida" }
+              ]}
+            />
+
+            <ResourceSection
+              title="Legal Help"
+              resources={[
+                { name: "Veterans Legal Services", link: "https://www.veteranslegalservices.org/", desc: "Free legal aid for veterans on benefits, housing, and discharge upgrades" },
+                { name: "National Veterans Legal Services Program", link: "https://www.nvlsp.org/", desc: "Fights for veterans' rights in court — free of charge" },
+                { name: "Swords to Plowshares", link: "https://www.swords-to-plowshares.org/", desc: "Legal services, employment, and housing for veterans" },
+                { name: "Discharge Upgrade — VA Guide", link: "https://www.va.gov/discharge-upgrade-instructions/", desc: "Step-by-step guide to upgrading a less-than-honorable discharge" },
+                { name: "Florida Rural Legal Services — Veterans", link: "https://www.frls.org/", desc: "Free civil legal aid for low-income veterans in Central Florida" }
+              ]}
+            />
+
+            <ResourceSection
+              title="Financial Assistance"
+              resources={[
+                { name: "Operation Homefront", link: "https://www.operationhomefront.org/", desc: "Emergency financial assistance and long-term stability programs" },
+                { name: "Veterans Inc. Financial Help", link: "https://www.veteransinc.org/", desc: "Emergency financial aid for veterans in crisis" },
+                { name: "PenFed Foundation", link: "https://penfedfoundation.org/", desc: "Emergency assistance grants and financial coaching for veterans" },
+                { name: "Disabled American Veterans (DAV)", link: "https://www.dav.org/", desc: "Benefits claims help, transportation, and financial support" },
+                { name: "USAA Financial Readiness", link: "https://www.usaa.com/inet/wc/advice-financial-readiness", desc: "Financial planning tools and resources for military families" }
+              ]}
+            />
+
+            <ResourceSection
+              title="Substance Use & Recovery"
+              resources={[
+                { name: "VA Substance Use Treatment", link: "https://www.va.gov/health-care/health-needs-conditions/substance-use-problems/", desc: "VA programs for alcohol, drug, and opioid treatment" },
+                { name: "SAMHSA Veterans Helpline", link: "https://www.samhsa.gov/veterans-military-families", desc: "1-800-662-4357 — free, confidential treatment referrals 24/7" },
+                { name: "Volunteers of America — Recovery", link: "https://www.voa.org/veterans", desc: "Residential recovery programs specifically for veterans" },
+                { name: "Warrior's Heart", link: "https://www.warriorsheart.com/", desc: "Private treatment center for active military, veterans, and first responders" }
+              ]}
+            />
+
+            <ResourceSection
+              title="Women Veterans"
+              resources={[
+                { name: "VA Women Veterans Program", link: "https://www.va.gov/womenvet/", desc: "Healthcare, benefits, and support tailored for women veterans" },
+                { name: "Women Veterans Interactive", link: "https://www.womenvetinteractive.com/", desc: "Community, resources, and advocacy for women who served" },
+                { name: "Final Salute Inc.", link: "https://www.finalsaluteinc.org/", desc: "Safe and stable housing specifically for women veterans and their children" },
+                { name: "Service Women's Action Network", link: "https://www.servicewomen.org/", desc: "Policy advocacy and peer support for women in the military" }
+              ]}
+            />
+
+            <ResourceSection
+              title="Family & Caregiver Support"
+              resources={[
+                { name: "VA Caregiver Support Program", link: "https://www.caregiver.va.gov/", desc: "Stipends, training, and respite care for caregivers of veterans" },
+                { name: "National Alliance on Mental Illness — Veterans", link: "https://www.nami.org/Your-Journey/Veterans-Active-Duty", desc: "Mental health support for veterans and their families" },
+                { name: "Give an Hour", link: "https://giveanhour.org/", desc: "Free mental health care for military families from volunteer providers" },
+                { name: "Blue Star Families", link: "https://bluestarfam.org/", desc: "Programs and research supporting military family well-being" },
+                { name: "Tragedy Assistance Program for Survivors (TAPS)", link: "https://www.taps.org/", desc: "Grief support for families who have lost a loved one in military service" }
+              ]}
+            />
+
+            <ResourceSection
+              title="Peer Support & Community"
+              resources={[
+                { name: "Team Red White & Blue", link: "https://www.teamrwb.org/", desc: "Physical and social activities connecting veterans to their communities" },
+                { name: "The Mission Continues", link: "https://missioncontinues.org/", desc: "Veteran service platoons doing community impact work nationwide" },
+                { name: "Student Veterans of America", link: "https://studentveterans.org/", desc: "Support network for veterans pursuing higher education" },
+                { name: "Veterans of Foreign Wars (VFW)", link: "https://www.vfw.org/", desc: "Advocacy, camaraderie, and community for combat veterans" },
+                { name: "American Legion", link: "https://www.legion.org/", desc: "The nation's largest veterans service organization — local posts nationwide" }
               ]}
             />
           </div>
