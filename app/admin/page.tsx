@@ -32,15 +32,16 @@ export default function Admin() {
   }, []);
 
   async function loadData() {
-    const [sigs, sponsors, vols, contacts, intakes, partners] = await Promise.all([
+    const [sigs, sponsors, vols, contacts, intakes, partners, newsletter] = await Promise.all([
       supabase.from("signatures").select("*").order("created_at", { ascending: false }),
       supabase.from("sponsor_leads").select("*").order("created_at", { ascending: false }),
       supabase.from("volunteers").select("*").order("created_at", { ascending: false }),
       supabase.from("contact_messages").select("*").order("created_at", { ascending: false }),
       supabase.from("intake_requests").select("*").order("created_at", { ascending: false }),
-      supabase.from("partners").select("*").order("display_order", { ascending: true })
+      supabase.from("partners").select("*").order("display_order", { ascending: true }),
+      supabase.from("newsletter_subscribers").select("*").order("created_at", { ascending: false }),
     ]);
-    setData({ sigs: sigs.data || [], sponsors: sponsors.data || [], vols: vols.data || [], contacts: contacts.data || [], intakes: intakes.data || [], partners: partners.data || [] });
+    setData({ sigs: sigs.data || [], sponsors: sponsors.data || [], vols: vols.data || [], contacts: contacts.data || [], intakes: intakes.data || [], partners: partners.data || [], newsletter: newsletter.data || [] });
   }
 
   async function signIn(e: React.FormEvent) {
@@ -105,7 +106,7 @@ export default function Admin() {
       <section>
         <Container className="py-8">
           <div className="flex gap-2 border-b border-slate-200 mb-6 overflow-x-auto">
-            {["overview", "signatures", "sponsors", "volunteers", "contacts", "intakes", "partners"].map((v) => (
+            {["overview", "signatures", "sponsors", "volunteers", "contacts", "intakes", "newsletter", "partners"].map((v) => (
               <button
                 key={v}
                 onClick={() => setView(v)}
@@ -124,6 +125,7 @@ export default function Admin() {
               <Stat label="Contact Messages" value={data.contacts?.length || 0} onClick={() => setView("contacts")} />
               <Stat label="Intake Requests" value={data.intakes?.length || 0} onClick={() => setView("intakes")} />
               <Stat label="Partners" value={data.partners?.length || 0} onClick={() => setView("partners")} />
+              <Stat label="Newsletter" value={data.newsletter?.length || 0} onClick={() => setView("newsletter")} />
             </div>
           )}
 
@@ -208,6 +210,32 @@ export default function Admin() {
           )}
 
           {view === "partners" && <PartnersManager data={data.partners} onUpdate={loadData} />}
+
+          {view === "newsletter" && (
+            <div>
+              <div className="flex items-center justify-between mb-4">
+                <h2 className="text-xl font-semibold">Newsletter Subscribers ({data.newsletter?.length || 0})</h2>
+                <a
+                  href={`/api/admin/export?type=newsletter&key=${process.env.NEXT_PUBLIC_ADMIN_KEY || ""}`}
+                  className="rounded-md px-4 py-2 bg-[#4A5D3F] text-white text-sm hover:bg-[#3d4d34]"
+                  download
+                >
+                  Export CSV
+                </a>
+              </div>
+              <Table
+                title=""
+                columns={["Email", "First Name", "Source", "Active", "Date"]}
+                rows={(data.newsletter || []).map((s: any) => [
+                  s.email,
+                  s.first_name || "—",
+                  s.source,
+                  s.is_active ? "Yes" : "No",
+                  new Date(s.created_at).toLocaleDateString()
+                ])}
+              />
+            </div>
+          )}
         </Container>
       </section>
     </main>

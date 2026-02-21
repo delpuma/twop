@@ -3,6 +3,7 @@ import "./globals.css";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 import AIChat from "../components/AIChat";
+import PopupWidget from "../components/PopupWidget";
 
 export const metadata = {
   title: {
@@ -30,6 +31,7 @@ export default function RootLayout({ children }:{ children: React.ReactNode }){
         <main>{children}</main>
         <Footer />
         <AIChat />
+        <PopupWidget />
       </body>
     </html>
   );

@@ -86,3 +86,13 @@ create table if not exists partners (
   display_order int default 0,
   is_active boolean default true
 );
+
+-- NEWSLETTER SUBSCRIBERS
+create table if not exists newsletter_subscribers (
+  id bigint generated always as identity primary key,
+  created_at timestamp with time zone default now(),
+  email text not null unique,
+  first_name text default '',
+  source text default 'popup',
+  is_active boolean default true
+);

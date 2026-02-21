@@ -20,6 +20,7 @@ export default function SignatureForm({ onDone }:{ onDone?: ()=>void }){
     const res = await fetch("/api/signatures",{method:"POST",headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
     if(res.ok){
       setStatus("ok"); setMsg("Thank you — your support has been recorded.");
+      localStorage.setItem("vp_signed", "1");
       (e.currentTarget as HTMLFormElement).reset();
       onDone?.();
     } else {

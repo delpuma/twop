@@ -25,7 +25,8 @@ export async function GET(req: Request) {
     volunteers: { table: "volunteers", cols: ["created_at","full_name","email","phone","interests","availability"] },
     contacts: { table: "contact_messages", cols: ["created_at","full_name","email","topic","message"] },
     intake: { table: "intake_requests", cols: ["created_at","full_name","email","phone","branch","needs","is_homeless","urgent_medical","location","notes"] },
-    letters: { table: "letters", cols: ["created_at","org_name","contact_name","email","file_url"] }
+    letters: { table: "letters", cols: ["created_at","org_name","contact_name","email","file_url"] },
+    newsletter: { table: "newsletter_subscribers", cols: ["created_at","email","first_name","source","is_active"] }
   };
 
   const m = map[type];
