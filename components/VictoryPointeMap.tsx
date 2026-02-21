@@ -1,23 +1,24 @@
 "use client";
 import { useEffect, useRef } from "react";
 
-// Victory Pointe trail corridor — ~1 mile along Lake Minneola shoreline, Clermont FL
-// Starts at main park entrance, runs NE along the waterfront to the yellow building near the boat ramp
+// South Lake Trail corridor — ~1 mile, Clermont FL
+// Starts at 7th St & South Lake Trail, runs NW along the trail to Victory Pointe park
+// Coordinates traced from OSM way data (Ways 48622459, 1189454419, 192855962, etc.)
 const TRAIL: [number, number][] = [
-  [28.5468, -81.7758], // Station 1 — park entrance / main pavilion
-  [28.5475, -81.7748], // Station 2
-  [28.5482, -81.7738], // Station 3
-  [28.5489, -81.7726], // Station 4
-  [28.5495, -81.7714], // Station 5 — midpoint / waterfront overlook
-  [28.5501, -81.7702], // Station 6
-  [28.5507, -81.7690], // Station 7
-  [28.5513, -81.7678], // Station 8
-  [28.5519, -81.7666], // Station 9
-  [28.5524, -81.7654], // Station 10
-  [28.5530, -81.7642], // Station 11 — Honor Plaza
+  [28.5534, -81.7669], // Station 1  — 7th St & South Lake Trail (start)
+  [28.5545, -81.7676], // Station 2
+  [28.5557, -81.7685], // Station 3
+  [28.5574, -81.7692], // Station 4  — trail junction
+  [28.5574, -81.7706], // Station 5  — near park structure
+  [28.5575, -81.7714], // Station 6
+  [28.5578, -81.7722], // Station 7
+  [28.5581, -81.7730], // Station 8
+  [28.5585, -81.7741], // Station 9
+  [28.5591, -81.7750], // Station 10
+  [28.5596, -81.7753], // Station 11 — Honor Plaza / Victory Pointe park end
 ];
 
-const YELLOW_BUILDING: [number, number] = [28.5535, -81.7630]; // Yellow intake building near boat ramp
+const YELLOW_BUILDING: [number, number] = [28.5575, -81.7706]; // Yellow building on-site at Victory Pointe park
 
 const STATIONS = [
   { pos: TRAIL[0],  num: "1",  label: "Army — Strength Zone" },
@@ -51,7 +52,7 @@ export default function VictoryPointeMap() {
       });
 
       const map = L.map(ref.current!, { scrollWheelZoom: false }).setView(
-        [28.5500, -81.7695], 15
+        [28.5565, -81.7710], 15
       );
       mapRef.current = map;
 

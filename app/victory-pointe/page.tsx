@@ -93,16 +93,16 @@ export default function VictoryPointe(){
         <Container className="py-12">
           <h2 className="text-2xl font-semibold">Where Is Victory Pointe?</h2>
           <p className="mt-3 text-slate-600 max-w-3xl">
-            Victory Pointe is a City of Clermont waterfront park on Lake Minneola — one of the most visited public spaces in Central Florida. The proposed ~1-mile veteran fitness corridor runs along the existing lakeside trail from the main park entrance to the yellow building near the boat ramp, which will serve as the Veteran Intake &amp; Navigation Hub. All 11 stations follow the existing paved path — no new infrastructure required.
+            Victory Pointe is a City of Clermont waterfront park on Lake Minneola. The proposed ~1-mile veteran fitness corridor runs along the South Lake Trail from 7th Street northwest to Victory Pointe park — following the existing paved trail the entire way. All 11 stations sit on the South Lake Trail, with Station 11 (Honor Plaza) at the Victory Pointe park end. The yellow building on-site at Victory Pointe will serve as the Veteran Intake &amp; Navigation Hub.
           </p>
           <div className="mt-4 grid gap-3 md:grid-cols-3 text-sm">
             <div className="rounded-lg bg-white border border-slate-200 p-4">
               <div className="font-semibold text-[#4A5D3F]">📍 Location</div>
-              <p className="mt-1 text-slate-600">Victory Pointe Park, 330 S. 12th St, Clermont, FL 34711 — on the shores of Lake Minneola</p>
+              <p className="mt-1 text-slate-600">South Lake Trail, Clermont, FL — from 7th Street northwest to Victory Pointe park on Lake Minneola</p>
             </div>
             <div className="rounded-lg bg-white border border-slate-200 p-4">
               <div className="font-semibold text-[#4A5D3F]">🏃 Trail Length</div>
-              <p className="mt-1 text-slate-600">~1 mile of existing paved lakeside trail. 11 stations spaced evenly. Connects to the South Lake Trail regional network (75+ miles).</p>
+              <p className="mt-1 text-slate-600">~1 mile of existing paved South Lake Trail. 11 stations spaced evenly. Part of the 75+ mile South Lake Trail regional network.</p>
             </div>
             <div className="rounded-lg bg-yellow-50 border border-yellow-200 p-4">
               <div className="font-semibold text-yellow-700">🏠 Yellow Building</div>
