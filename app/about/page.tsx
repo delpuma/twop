@@ -13,10 +13,10 @@ export const metadata = buildMeta(
 const TEAM = [
   { name: "Chris Fabiano",  title: "Founder & CEO", vet: true,  photo: "/images/board/chris.jpg",      bio: "Veteran and visionary behind the Warrior Outreach Project. Chris built this mission from the ground up to ensure no veteran is left behind." },
   { name: "Nicholas Moroz", title: "CTO",            vet: true,  photo: "/images/board/nicholas.jpg",   bio: "Veteran and technology leader driving the digital infrastructure and innovation behind the project." },
-  { name: "Francisco",      title: "COO",            vet: true,  photo: "/images/board/francisco.jpg",  bio: "Veteran and operations leader ensuring every program runs with precision, accountability, and care." },
+  { name: "Francisco Baez", title: "COO",            vet: true,  photo: "/images/board/francisco.jpg",  bio: "Veteran and operations leader ensuring every program runs with precision, accountability, and care." },
   { name: "Ryan Morales",   title: "CMO",            vet: false, photo: null,                           bio: "Marketing and brand strategist focused on growing community awareness and driving the mission forward." },
   { name: "Matt Sanjari",   title: "CFO",            vet: false, photo: null,                           bio: "Financial strategist ensuring the organization operates with transparency, sustainability, and impact." },
-  { name: "Ernest",         title: "CPO",            vet: true,  photo: "/images/board/ernest.jpg",     bio: "Veteran and program architect designing the systems and pathways that move veterans from crisis to independence." },
+  { name: "Ernest Reid",    title: "CPO",            vet: true,  photo: "/images/board/ernest.jpg",     bio: "Veteran and program architect designing the systems and pathways that move veterans from crisis to independence." },
 ];
 
 const VALUES = [
