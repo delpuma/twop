@@ -53,15 +53,7 @@ export default function About(){
             </div>
           </div>
 
-          <div className="mt-12 rounded-xl border border-slate-200 bg-slate-50 p-8">
-            <h2 className="text-2xl font-semibold">Why Clermont?</h2>
-            <p className="mt-4 text-slate-700 leading-relaxed">
-              Victory Pointe presents a unique, high-visibility lakeside environment where Clermont can create a nationally distinctive Veteran Fitness &amp; Memorial Corridor that serves both veterans and the broader community. This initiative activates existing public space with minimal new infrastructure while increasing positive foot traffic and demonstrating Clermont&apos;s commitment to veteran wellness and suicide prevention.
-            </p>
-            <p className="mt-4 text-slate-700 leading-relaxed">
-              The initiative is structured to protect the City of Clermont by leveraging existing infrastructure, pursuing private sponsorships, building healthcare and workforce partnerships, and phasing program growth responsibly — tracking measurable performance metrics every step of the way.
-            </p>
-          </div>
+
         </Container>
       </section>
 
