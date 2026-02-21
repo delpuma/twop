@@ -167,26 +167,32 @@ export default function VictoryPointe(){
             </div>
           </div>
 
-          <div className="mt-10 rounded-xl bg-slate-900 text-white p-6 grid md:grid-cols-4 gap-6">
+          <div className="mt-10 rounded-xl bg-slate-900 text-white p-6 grid md:grid-cols-5 gap-6">
             <div>
-              <div className="text-xs uppercase tracking-wide opacity-60">Stations 1–10 Memorial Total</div>
-              <div className="text-2xl font-bold mt-1">$170,000</div>
-              <div className="text-xs opacity-60 mt-1">10 × $17,000 per station</div>
+              <div className="text-xs uppercase tracking-wide opacity-60">Stations 1–10 Memorials</div>
+              <div className="text-2xl font-bold mt-1">$300,000</div>
+              <div className="text-xs opacity-60 mt-1">Bronze + granite per station</div>
             </div>
             <div>
-              <div className="text-xs uppercase tracking-wide opacity-60">Stations 1–10 Equipment Total</div>
-              <div className="text-2xl font-bold mt-1">~$110,000</div>
-              <div className="text-xs opacity-60 mt-1">Varies by station complexity</div>
+              <div className="text-xs uppercase tracking-wide opacity-60">Stations 1–10 Equipment</div>
+              <div className="text-2xl font-bold mt-1">$300,000</div>
+              <div className="text-xs opacity-60 mt-1">Branch-themed fitness equipment</div>
             </div>
             <div>
               <div className="text-xs uppercase tracking-wide opacity-60">Station 11 Honor Plaza</div>
               <div className="text-2xl font-bold mt-1">~$200,000</div>
               <div className="text-xs opacity-60 mt-1">6 bronze dogs + equipment + site</div>
             </div>
+            <div>
+              <div className="text-xs uppercase tracking-wide opacity-60">Yellow Building — Intake Office</div>
+              <div className="text-2xl font-bold mt-1">$100,000</div>
+              <div className="text-xs opacity-60 mt-1">Equipment &amp; renovations for veteran intake hub</div>
+              <a href="/sponsors" className="mt-2 inline-block rounded-lg bg-white/10 text-white text-xs font-semibold px-3 py-1.5 hover:bg-white/20 transition-colors">Sponsor This →</a>
+            </div>
             <div className="flex flex-col justify-center">
-              <div className="text-xs uppercase tracking-wide opacity-60">Total Project Sponsorship</div>
-              <div className="text-2xl font-bold mt-1">~$480,000</div>
-              <div className="text-xs opacity-60 mt-1">One sponsor, many sponsors, or the whole community</div>
+              <div className="text-xs uppercase tracking-wide opacity-60">Total Project</div>
+              <div className="text-2xl font-bold mt-1">~$900,000</div>
+              <div className="text-xs opacity-60 mt-1">One sponsor, many, or the whole community</div>
               <a href="/donate" className="mt-3 inline-block rounded-lg bg-white text-slate-900 text-xs font-semibold px-4 py-2 hover:bg-slate-100 transition-colors">Contribute Now →</a>
             </div>
           </div>
