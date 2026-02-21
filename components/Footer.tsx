@@ -32,6 +32,8 @@ export default function Footer() {
               (212) 729-0453<br/><br/>
               <span className="font-medium">567 Tompkins Ave Unit 50427</span><br/>
               Staten Island, NY 10305<br/><br/>
+              <span className="font-medium">11505 Pineloch Loop</span><br/>
+              Clermont, FL 34711<br/><br/>
               Expanding across the East Coast
             </p>
           </div>

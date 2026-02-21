@@ -23,7 +23,7 @@ export default function HomeHero({ supporters, letters }: { supporters: number; 
         <div className="fade-up" style={{ animationDelay: "0ms" }}>
           <span className="inline-flex items-center gap-2 rounded-full bg-amber-500/15 border border-amber-400/30 text-amber-300 text-xs font-semibold uppercase tracking-widest px-4 py-1.5">
             <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />
-            501(c)(3) Nonprofit · Clermont, Florida
+            501(c)(3) Nonprofit · Clermont, FL &amp; Staten Island, NY
           </span>
         </div>
 
