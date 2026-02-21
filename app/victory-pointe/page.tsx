@@ -227,7 +227,7 @@ export default function VictoryPointe(){
             </div>
             <div className="flex flex-col justify-center">
               <div className="text-xs uppercase tracking-wide opacity-60">Total Project</div>
-              <div className="text-2xl font-bold mt-1">~$1,150,000</div>
+              <div className="text-2xl font-bold mt-1">$3,000,000</div>
               <div className="text-xs opacity-60 mt-1">One sponsor, many, or the whole community</div>
               <a href="/donate" className="mt-3 inline-block rounded-lg bg-white text-slate-900 text-xs font-semibold px-4 py-2 hover:bg-slate-100 transition-colors">Contribute Now →</a>
             </div>
