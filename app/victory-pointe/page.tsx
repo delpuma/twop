@@ -23,21 +23,60 @@ export default function VictoryPointe(){
 
   return (
     <div>
+
+      {/* HERO */}
+      <section className="relative bg-[#1a2416] text-white overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute w-[600px] h-[600px] rounded-full bg-[#4A5D3F] opacity-20 blur-[120px] -top-40 -right-20" />
+          <div className="absolute w-[400px] h-[400px] rounded-full bg-amber-700 opacity-15 blur-[80px] bottom-0 left-10" />
+          <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: "linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px)", backgroundSize: "60px 60px" }} />
+        </div>
+        <Container className="relative z-10 py-20">
+          <div className="max-w-4xl">
+            <span className="inline-flex items-center gap-2 rounded-full bg-amber-500/15 border border-amber-400/30 text-amber-300 text-xs font-semibold uppercase tracking-widest px-4 py-1.5 mb-5">
+              <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />
+              Proposed 2026–2027 · City of Clermont, FL
+            </span>
+            <h1 className="text-5xl md:text-6xl font-black tracking-tight leading-[1.05]">
+              Victory Pointe<br />
+              <span className="text-amber-400">Veteran Fitness &amp; Memorial Corridor</span>
+            </h1>
+            <p className="mt-6 text-lg text-white/70 leading-relaxed max-w-3xl">
+              A public-private partnership proposal for the City of Clermont — creating a nationally distinctive veteran fitness corridor that honors service, activates public space, and builds measurable community impact.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-4">
+              <a href="#sign" className="rounded-xl bg-amber-500 text-white font-bold px-8 py-4 hover:bg-amber-400 transition-all hover:scale-105 shadow-lg shadow-amber-500/20">
+                ✍️ Sign Now — Show Your Support
+              </a>
+              <a href="#stations" className="rounded-xl bg-white/10 border border-white/20 text-white font-bold px-8 py-4 hover:bg-white/20 transition-all backdrop-blur-sm">
+                Explore the 11 Stations
+              </a>
+              <a href="/donate" className="rounded-xl border border-white/10 text-white/70 font-medium px-8 py-4 hover:text-white hover:border-white/30 transition-all">
+                Donate to the Project
+              </a>
+            </div>
+            {/* Live KPIs */}
+            <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 border-t border-white/10 pt-8">
+              <Kpi label="Community Supporters" value={stats.supporters.toLocaleString()} />
+              <Kpi label="Letters of Support" value={stats.letters.toLocaleString()} />
+              <Kpi label="Sponsor Leads" value={stats.sponsors.toLocaleString()} />
+              <Kpi label="Pledged Pipeline" value={`$${stats.pledged.toLocaleString()}`} />
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* STICKY SIGN CTA STRIP */}
+      <div className="bg-amber-500 text-white">
+        <Container className="py-3 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <p className="text-sm font-semibold">📣 Help us bring Victory Pointe to life — add your name to the community support list.</p>
+          <a href="#sign" className="shrink-0 rounded-lg bg-white text-amber-600 font-bold text-sm px-5 py-2 hover:bg-amber-50 transition-colors">Sign Now →</a>
+        </Container>
+      </div>
+
       <section className="bg-white border-b border-slate-200">
         <Container className="py-14">
-          <h1 className="text-4xl font-semibold tracking-tight">Victory Pointe Veteran Fitness &amp; Support Initiative</h1>
-          <p className="mt-4 max-w-3xl text-slate-700 leading-relaxed">
-            A public-private partnership proposal for the City of Clermont, Florida — creating a nationally distinctive Veteran Fitness &amp; Memorial Corridor at Victory Pointe that honors service, activates public space, and builds measurable community impact.
-          </p>
-
-          <div className="mt-8 grid gap-4 md:grid-cols-4">
-            <Kpi label="Community supporters" value={stats.supporters.toLocaleString()} />
-            <Kpi label="Letters of support" value={stats.letters.toLocaleString()} />
-            <Kpi label="Sponsor leads" value={stats.sponsors.toLocaleString()} />
-            <Kpi label="Pledged pipeline" value={`$${stats.pledged.toLocaleString()}`} />
-          </div>
-
-          <div className="mt-10 grid gap-6 md:grid-cols-2">
+          <div className="mt-0 grid gap-6 md:grid-cols-2">
             <div className="rounded-xl border border-slate-200 bg-slate-50 p-6">
               <h2 className="text-xl font-semibold">What this creates for Clermont</h2>
               <ul className="mt-4 list-disc pl-5 space-y-2 text-slate-700">
@@ -58,7 +97,8 @@ export default function VictoryPointe(){
               </div>
             </div>
 
-            <div className="rounded-xl border border-slate-200 bg-white p-6">
+            <div id="sign" className="rounded-xl border-2 border-amber-400 bg-amber-50 p-6">
+              <div className="text-xs uppercase tracking-widest text-amber-600 font-semibold mb-2">✍️ Add Your Name</div>
               <h2 className="text-xl font-semibold">Sign to show community support</h2>
               <p className="mt-2 text-sm text-slate-600">
                 Signatures demonstrate public backing and help unlock sponsor participation. Support totals may be shared as aggregate counts with City leadership.
@@ -117,7 +157,7 @@ export default function VictoryPointe(){
       </section>
 
       {/* STATIONS DETAIL */}
-      <section className="bg-white border-b border-slate-200">
+      <section id="stations" className="bg-white border-b border-slate-200">
         <Container className="py-14">
           <h2 className="text-3xl font-semibold">The 11 Stations</h2>
           <p className="mt-3 text-slate-600 max-w-3xl">
@@ -376,9 +416,9 @@ export default function VictoryPointe(){
 
 function Kpi({ label, value }:{ label: string; value: string }){
   return (
-    <div className="rounded-xl border border-slate-200 bg-white p-5">
-      <div className="text-xs uppercase tracking-wide text-slate-500">{label}</div>
-      <div className="mt-2 text-2xl font-semibold text-slate-900">{value}</div>
+    <div>
+      <div className="text-2xl font-black text-amber-400">{value}</div>
+      <div className="mt-1 text-xs text-white/50 leading-snug">{label}</div>
     </div>
   );
 }

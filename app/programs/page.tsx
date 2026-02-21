@@ -15,14 +15,29 @@ export default function Programs(){
     <main>
 
       {/* HERO */}
-      <section className="bg-[#4A5D3F] text-white">
-        <Container className="py-16">
+      <section className="relative bg-[#1a2416] text-white overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute w-[500px] h-[500px] rounded-full bg-[#4A5D3F] opacity-20 blur-[100px] -top-40 -right-20" />
+          <div className="absolute w-[350px] h-[350px] rounded-full bg-amber-700 opacity-15 blur-[80px] bottom-0 left-10" />
+          <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: "linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px)", backgroundSize: "60px 60px" }} />
+        </div>
+        <Container className="relative z-10 py-20">
           <div className="max-w-3xl">
-            <div className="inline-block rounded-full bg-amber-500/20 border border-amber-400/40 text-amber-300 text-xs font-semibold uppercase tracking-widest px-4 py-1.5 mb-4">What We Do</div>
-            <h1 className="text-5xl font-bold tracking-tight leading-tight">Programs built to get veterans home — and keep them there.</h1>
-            <p className="mt-5 text-lg text-white/80 leading-relaxed max-w-2xl">
-              We don't just hand out resources. We walk alongside veterans through housing, healthcare, workforce training, and community — until they're stable, employed, and thriving.
+            <span className="inline-flex items-center gap-2 rounded-full bg-amber-500/15 border border-amber-400/30 text-amber-300 text-xs font-semibold uppercase tracking-widest px-4 py-1.5 mb-5">
+              <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />
+              What We Do
+            </span>
+            <h1 className="text-5xl md:text-6xl font-black tracking-tight leading-[1.05]">
+              Programs built to get veterans home —<br />
+              <span className="text-amber-400">and keep them there.</span>
+            </h1>
+            <p className="mt-6 text-lg text-white/70 leading-relaxed max-w-2xl">
+              We don&apos;t just hand out resources. We walk alongside veterans through housing, healthcare, workforce training, and community — until they&apos;re stable, employed, and thriving.
             </p>
+            <div className="mt-8 flex flex-wrap gap-4">
+              <Link href="/get-help" className="rounded-xl bg-amber-500 text-white font-bold px-8 py-4 hover:bg-amber-400 transition-all hover:scale-105 shadow-lg shadow-amber-500/20">I Need Help →</Link>
+              <Link href="/sponsor" className="rounded-xl bg-white/10 border border-white/20 text-white font-bold px-8 py-4 hover:bg-white/20 transition-all backdrop-blur-sm">Sponsor a Veteran</Link>
+            </div>
           </div>
         </Container>
       </section>
@@ -30,16 +45,16 @@ export default function Programs(){
       {/* IMPACT STATS */}
       <section className="bg-slate-900 text-white">
         <Container className="py-10">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
             {[
-              { stat: "20–30", label: "Veterans in residential program at a time" },
-              { stat: "9–12 mo", label: "Average time to stable independent housing" },
-              { stat: "$2,800–$3,500", label: "Per veteran per month — all-in cost" },
-              { stat: "1,000s", label: "Veterans we aim to serve annually at scale" },
-            ].map(({ stat, label }) => (
-              <div key={label}>
-                <div className="text-2xl font-bold text-amber-400">{stat}</div>
-                <div className="mt-1 text-sm text-slate-400 leading-snug">{label}</div>
+              { stat: "20–30",          label: "Veterans in residential program at a time",      color: "text-amber-400" },
+              { stat: "9–12 mo",         label: "Average time to stable independent housing",     color: "text-green-400" },
+              { stat: "$2,800–$3,500",  label: "Per veteran per month — all-in cost",            color: "text-blue-400" },
+              { stat: "1,000s",          label: "Veterans we aim to serve annually at scale",      color: "text-purple-400" },
+            ].map(({ stat, label, color }) => (
+              <div key={label} className="p-4 rounded-xl bg-white/5 border border-white/10">
+                <div className={`text-2xl font-black ${color}`}>{stat}</div>
+                <div className="mt-1.5 text-xs text-slate-400 leading-snug">{label}</div>
               </div>
             ))}
           </div>
@@ -151,18 +166,19 @@ export default function Programs(){
       {/* HOW IT WORKS */}
       <section className="bg-white border-b border-slate-200">
         <Container className="py-16">
-          <h2 className="text-3xl font-semibold">How the program works</h2>
+          <div className="text-xs uppercase tracking-widest text-[#4A5D3F] font-semibold mb-2">The Process</div>
+          <h2 className="text-3xl font-bold">How the program works</h2>
           <p className="mt-3 text-slate-600 max-w-3xl">Our model is designed to move veterans through stabilization efficiently — so we can serve more people without sacrificing quality of care.</p>
           <div className="mt-10 grid gap-6 md:grid-cols-4">
             {[
-              { step: "1", title: "Intake & Assessment", desc: "Veteran applies or is referred. We assess housing, health, employment, and support needs within 48 hours." },
-              { step: "2", title: "Stabilization", desc: "Housing, meals, healthcare navigation, and basic needs secured. Focus on safety and stability first." },
-              { step: "3", title: "Growth & Training", desc: "Workforce training, mental health support, peer mentorship, and life skills development." },
-              { step: "4", title: "Independence", desc: "Veteran graduates into stable independent housing and employment. Alumni network keeps them connected." },
-            ].map(({ step, title, desc }) => (
-              <div key={step}>
-                <div className="w-12 h-12 rounded-full bg-[#4A5D3F] text-white flex items-center justify-center text-xl font-bold mb-4">{step}</div>
-                <div className="font-semibold text-lg">{title}</div>
+              { step: "1", title: "Intake & Assessment", desc: "Veteran applies or is referred. We assess housing, health, employment, and support needs within 48 hours.", color: "bg-amber-500" },
+              { step: "2", title: "Stabilization",       desc: "Housing, meals, healthcare navigation, and basic needs secured. Focus on safety and stability first.",    color: "bg-blue-500" },
+              { step: "3", title: "Growth & Training",   desc: "Workforce training, mental health support, peer mentorship, and life skills development.",               color: "bg-purple-500" },
+              { step: "4", title: "Independence",        desc: "Veteran graduates into stable independent housing and employment. Alumni network keeps them connected.",   color: "bg-green-600" },
+            ].map(({ step, title, desc, color }) => (
+              <div key={step} className="relative">
+                <div className={`w-12 h-12 rounded-full ${color} text-white flex items-center justify-center text-xl font-black mb-4 shadow-lg`}>{step}</div>
+                <div className="font-bold text-lg">{title}</div>
                 <p className="mt-1 text-sm text-slate-600 leading-relaxed">{desc}</p>
               </div>
             ))}
@@ -196,15 +212,17 @@ export default function Programs(){
       </section>
 
       {/* CTA */}
-      <section className="bg-[#4A5D3F] text-white">
-        <Container className="py-12 flex flex-col md:flex-row items-center justify-between gap-6">
-          <div>
-            <h2 className="text-2xl font-semibold">Ready to get involved?</h2>
-            <p className="mt-1 text-white/80 max-w-xl">Sponsor a veteran, volunteer your time, or submit a letter of support for Victory Pointe. Every action moves the mission forward.</p>
-          </div>
-          <div className="flex flex-wrap gap-3 shrink-0">
-            <Link href="/sponsor" className="rounded-lg bg-amber-500 text-white font-semibold px-6 py-3 hover:bg-amber-600 transition-colors">Sponsor a Vet →</Link>
-            <Link href="/get-help" className="rounded-lg bg-white text-[#4A5D3F] font-semibold px-6 py-3 hover:bg-slate-100 transition-colors">Get Help →</Link>
+      <section className="bg-[#1a2416] text-white">
+        <Container className="py-14">
+          <div className="max-w-2xl mx-auto text-center">
+            <div className="text-xs uppercase tracking-widest text-amber-400 font-semibold mb-3">Get Involved</div>
+            <h2 className="text-3xl font-black">Ready to make a difference?</h2>
+            <p className="mt-3 text-white/70 leading-relaxed">Sponsor a veteran through our Guiding Light Program, volunteer your time, or submit a letter of support for Victory Pointe. Every action moves the mission forward.</p>
+            <div className="mt-8 flex flex-wrap gap-4 justify-center">
+              <Link href="/sponsor" className="rounded-xl bg-amber-500 text-white font-bold px-8 py-4 hover:bg-amber-400 transition-all hover:scale-105 shadow-lg shadow-amber-500/20">Guiding Light Program →</Link>
+              <Link href="/get-help" className="rounded-xl bg-white/10 border border-white/20 text-white font-bold px-8 py-4 hover:bg-white/20 transition-all backdrop-blur-sm">I Need Help →</Link>
+              <Link href="/donate" className="rounded-xl border border-white/10 text-white/70 font-medium px-8 py-4 hover:text-white hover:border-white/30 transition-all">Donate</Link>
+            </div>
           </div>
         </Container>
       </section>
