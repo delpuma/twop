@@ -93,7 +93,7 @@ export default function Sponsor(){
             <SponsorTier label="QR / VR Education Sponsor" price="$25,000 – $50,000" perks={["Sponsor 1–2 station VR experiences","Logo on station QR panel","Recognition in school program materials","Named in digital experience credits"]} />
             <div className="rounded-xl border-2 border-amber-400 bg-amber-50 p-6 md:col-span-2 lg:col-span-3">
               <div className="text-xs uppercase tracking-wide text-amber-700 font-semibold mb-1">Signature Opportunity</div>
-              <div className="text-xl font-bold mb-2">Full Project Presenting Sponsor — ~$1,150,000</div>
+              <div className="text-xl font-bold mb-2">Full Project Presenting Sponsor — $3,000,000</div>
               <p className="text-sm text-slate-600 mb-4">Name the entire Victory Pointe Veteran Fitness &amp; Memorial Corridor. Permanent recognition at every station, the Honor Plaza, the intake hub, and all digital and print materials. The defining legacy gift for Clermont's veteran community.</p>
               <a href="#sponsor-form" className="inline-block rounded-lg bg-amber-500 text-white text-sm font-semibold px-6 py-2.5 hover:bg-amber-600 transition-colors">Inquire About This Opportunity →</a>
             </div>
