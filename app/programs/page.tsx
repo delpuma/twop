@@ -1,6 +1,14 @@
 
 import Container from "../../components/Container";
 import Link from "next/link";
+import { buildMeta } from "../../lib/seo";
+
+export const metadata = buildMeta(
+  "Veteran Programs — Housing, Healthcare & Workforce",
+  "Warrior Outreach Project programs: transitional housing, healthcare navigation, workforce development, and community support for veterans in Florida and NYC.",
+  "/programs",
+  "veteran transitional housing, veteran healthcare navigation, veteran workforce training, veteran programs Florida, veteran support programs"
+);
 
 export default function Programs(){
   return (

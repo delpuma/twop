@@ -1,5 +1,13 @@
 
 import Container from "../../components/Container";
+import { buildMeta } from "../../lib/seo";
+
+export const metadata = buildMeta(
+  "About Us",
+  "Learn about the Warrior Outreach Project — our mission, board, and programs providing veteran housing, healthcare navigation, and workforce training across NYC and Florida.",
+  "/about",
+  "about Warrior Outreach Project, veteran nonprofit mission, veteran housing nonprofit, veteran 501c3 Florida"
+);
 
 export default function About(){
   return (

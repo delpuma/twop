@@ -1,6 +1,14 @@
 
 import Container from "../../components/Container";
 import VolunteerForm from "../../components/VolunteerForm";
+import { buildMeta } from "../../lib/seo";
+
+export const metadata = buildMeta(
+  "Volunteer with Veterans",
+  "Volunteer with the Warrior Outreach Project. Help with outreach, events, skilled trades, admin, and veteran support programs in Clermont, FL and NYC.",
+  "/volunteer",
+  "volunteer with veterans, veteran volunteer Florida, veteran nonprofit volunteer, Clermont volunteer, help veterans volunteer"
+);
 
 export default function Volunteer(){
   return (

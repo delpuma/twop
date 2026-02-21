@@ -1,6 +1,14 @@
 
 import Link from "next/link";
 import Container from "../../components/Container";
+import { buildMeta } from "../../lib/seo";
+
+export const metadata = buildMeta(
+  "Donate — Support Veterans",
+  "Donate to the Warrior Outreach Project. Fund veteran housing, the Victory Pointe fitness corridor in Clermont FL, and the Wash Bus mobile shower project for homeless veterans.",
+  "/donate",
+  "donate to veterans, veteran charity donation, fund veteran housing, Victory Pointe donation, homeless veteran donation, 501c3 veteran donation tax deductible"
+);
 
 export default function Donate(){
   return (

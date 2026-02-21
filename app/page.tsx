@@ -4,6 +4,14 @@ import Partners from "../components/Partners";
 import BranchesSlider from "../components/BranchesSlider";
 import Link from "next/link";
 import Image from "next/image";
+import { buildMeta } from "../lib/seo";
+
+export const metadata = buildMeta(
+  "Veteran Housing, Fitness & Community",
+  "Warrior Outreach Project — 501(c)(3) nonprofit providing veteran housing, healthcare navigation, workforce training, and building Victory Pointe in Clermont, Florida.",
+  "/",
+  "veteran nonprofit, veteran housing Florida, veteran support Clermont, Victory Pointe Clermont, donate to veterans, veteran charity 501c3"
+);
 
 export default function Home(){
   return (

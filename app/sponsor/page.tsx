@@ -1,6 +1,14 @@
 
 import Container from "../../components/Container";
 import SponsorForm from "../../components/SponsorForm";
+import { buildMeta } from "../../lib/seo";
+
+export const metadata = buildMeta(
+  "Sponsor a Station — Victory Pointe",
+  "Sponsor a veteran fitness station or the Military Working Dog Honor Plaza at Victory Pointe in Clermont, FL. Station naming rights from $25,000. Honor Plaza from $75,000.",
+  "/sponsor",
+  "sponsor veteran station, Victory Pointe sponsor, veteran memorial sponsor Clermont, corporate veteran sponsorship, sponsor veteran fitness station Florida"
+);
 
 export default function Sponsor(){
   return (

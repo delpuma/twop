@@ -1,6 +1,14 @@
 
 import Container from "../../components/Container";
 import Link from "next/link";
+import { buildMeta } from "../../lib/seo";
+
+export const metadata = buildMeta(
+  "City Briefing — Victory Pointe Initiative",
+  "City of Clermont staff briefing on the Victory Pointe Veteran Fitness & Memorial Corridor — scope, funding model, phased implementation, and measurable outcomes.",
+  "/city-briefing",
+  "Victory Pointe Clermont city briefing, veteran corridor Clermont FL, public private partnership veteran, Clermont veteran initiative"
+);
 
 export default function CityBriefing(){
   return (

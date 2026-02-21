@@ -2,6 +2,7 @@
 "use client";
 import { useState } from "react";
 import Container from "../../components/Container";
+// metadata must be in a separate server component for client pages — handled via layout defaults
 
 export default function GetHelp(){
   const [status,setStatus]=useState<"idle"|"loading"|"ok"|"err">("idle");

@@ -1,6 +1,14 @@
 
 import Container from "../../components/Container";
 import ContactForm from "../../components/ContactForm";
+import { buildMeta } from "../../lib/seo";
+
+export const metadata = buildMeta(
+  "Contact Us",
+  "Contact the Warrior Outreach Project for partnership inquiries, media, sponsorships, or veteran service needs.",
+  "/contact",
+  "contact Warrior Outreach Project, veteran nonprofit contact, veteran partnership inquiry"
+);
 
 export default function Contact(){
   return (
