@@ -15,41 +15,55 @@ export default function Donate(){
     <main>
 
       {/* HERO */}
-      <section className="bg-[#4A5D3F] text-white">
-        <Container className="py-16">
+      <section className="relative bg-[#1a2416] text-white overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none">
+          <div style={{position:'absolute',width:600,height:600,borderRadius:'50%',background:'#4A5D3F',filter:'blur(90px)',opacity:0.2,top:-200,right:-100}} />
+          <div style={{position:'absolute',width:400,height:400,borderRadius:'50%',background:'#b45309',filter:'blur(80px)',opacity:0.15,bottom:-100,left:'10%'}} />
+          <div className="absolute inset-0 opacity-[0.03]" style={{backgroundImage:'linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px)',backgroundSize:'60px 60px'}} />
+        </div>
+        <Container className="relative z-10 py-20">
           <div className="max-w-3xl">
-            <div className="inline-block rounded-full bg-amber-500/20 border border-amber-400/40 text-amber-300 text-xs font-semibold uppercase tracking-widest px-4 py-1.5 mb-4">501(c)(3) · Tax-Deductible</div>
-            <h1 className="text-5xl font-bold tracking-tight leading-tight">Every dollar brings a veteran home.</h1>
-            <p className="mt-5 text-lg text-white/80 leading-relaxed max-w-2xl">
-              When we say bring every man home, we mean it. Your support funds housing, healthcare, workforce training, and a permanent veteran memorial corridor in Clermont, Florida.
+            <div className="inline-flex items-center gap-2 rounded-full bg-amber-500/15 border border-amber-400/30 text-amber-300 text-xs font-semibold uppercase tracking-widest px-4 py-1.5 mb-5">
+              <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />
+              501(c)(3) · All Donations Tax-Deductible
+            </div>
+            <h1 className="text-5xl md:text-6xl font-black tracking-tight leading-[1.05]">Every dollar<br /><span className="text-amber-400">brings a veteran home.</span></h1>
+            <p className="mt-6 text-lg text-white/70 leading-relaxed max-w-2xl">
+              When we say bring every man home, we mean it. Your support funds housing, healthcare, workforce training, and a proposed veteran memorial corridor in Clermont, Florida.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
-              <a href="#campaigns" className="rounded-lg bg-amber-500 text-white font-semibold px-8 py-3.5 hover:bg-amber-600 transition-colors">Donate Now →</a>
-              <a href="#check" className="rounded-lg bg-white/10 border border-white/20 text-white font-semibold px-8 py-3.5 hover:bg-white/20 transition-colors">Donate by Check</a>
+              <a href="#campaigns" className="rounded-xl bg-amber-500 text-white font-bold px-8 py-4 hover:bg-amber-400 transition-all hover:scale-105 shadow-lg shadow-amber-500/20">Donate Now →</a>
+              <a href="#check" className="rounded-xl bg-white/10 border border-white/20 text-white font-bold px-8 py-4 hover:bg-white/20 transition-all">Donate by Check</a>
+            </div>
+            <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 border-t border-white/10 pt-10">
+              {[
+                { value: "$25", label: "Feeds a vet for a week" },
+                { value: "$100", label: "A month of transportation" },
+                { value: "$500", label: "A month of case management" },
+                { value: "$2,800", label: "Full month of stabilization" },
+              ].map(({ value, label }) => (
+                <div key={value}>
+                  <div className="text-2xl font-black text-amber-400">{value}</div>
+                  <div className="mt-1 text-xs text-white/50 leading-snug">{label}</div>
+                </div>
+              ))}
             </div>
           </div>
         </Container>
       </section>
 
-      {/* IMPACT PER DOLLAR */}
-      <section className="bg-slate-900 text-white">
-        <Container className="py-12">
-          <div className="text-center mb-8">
-            <div className="text-xs uppercase tracking-widest text-amber-400 font-semibold mb-2">Your Impact</div>
-            <h2 className="text-2xl font-bold">See exactly what your donation does</h2>
-          </div>
-          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-            {[
-              { amount: "$25", impact: "Covers a week of meals for one veteran in our program" },
-              { amount: "$100", impact: "Funds transportation to VA appointments and job interviews for a month" },
-              { amount: "$500", impact: "Covers one veteran's case management and support services for a month" },
-              { amount: "$2,800+", impact: "Fully sponsors one veteran through a complete month of stabilization" },
-            ].map(({ amount, impact }) => (
-              <div key={amount} className="rounded-xl bg-white/5 border border-white/10 p-5 text-center">
-                <div className="text-3xl font-bold text-amber-400 mb-2">{amount}</div>
-                <p className="text-sm text-slate-400 leading-relaxed">{impact}</p>
+      {/* 22 A DAY URGENCY */}
+      <section className="bg-red-700 text-white">
+        <Container className="py-5">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-3">
+            <div className="flex items-center gap-4">
+              <div className="text-4xl font-black opacity-90">22</div>
+              <div>
+                <div className="font-bold">Veterans lost to suicide every single day.</div>
+                <div className="text-sm text-red-200">40,000+ veterans are homeless tonight. Your donation changes that.</div>
               </div>
-            ))}
+            </div>
+            <a href="#campaigns" className="shrink-0 rounded-xl bg-white text-red-700 font-bold px-6 py-2.5 hover:bg-red-50 transition-colors text-sm">Give Now →</a>
           </div>
         </Container>
       </section>
@@ -117,9 +131,23 @@ export default function Donate(){
       {/* VICTORY POINTE BREAKDOWN */}
       <section className="bg-white border-b border-slate-200">
         <Container className="py-16">
-          <div className="text-xs uppercase tracking-widest text-[#4A5D3F] font-semibold mb-2">Victory Pointe Breakdown</div>
-          <h2 className="text-3xl font-bold mb-3">What we're building — piece by piece</h2>
-          <p className="text-slate-600 mb-10 max-w-2xl">Every station can be sponsored by one organization or crowdfunded by the whole community. No contribution is too small — every dollar is recognized.</p>
+          <div className="text-xs uppercase tracking-widest text-[#4A5D3F] font-semibold mb-2">Victory Pointe — Proposed 2026–2027</div>
+          <h2 className="text-3xl font-bold mb-3">What we're proposing — piece by piece</h2>
+          <p className="text-slate-600 mb-10 max-w-2xl">Every station can be sponsored by one organization or crowdfunded by the whole community. No contribution is too small — every dollar moves us closer to breaking ground.</p>
+
+          {/* Big total callout */}
+          <div className="rounded-2xl bg-slate-900 text-white p-8 mb-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div>
+              <div className="text-xs uppercase tracking-widest text-amber-400 font-semibold mb-2">Full Project Goal</div>
+              <div className="text-5xl font-black text-white">$3,000,000</div>
+              <p className="mt-2 text-slate-400 text-sm max-w-lg">Private fundraising goal for the complete Victory Pointe Veteran Fitness &amp; Memorial Corridor — stations, memorials, Honor Plaza, QR/VR education, and veteran intake hub.</p>
+            </div>
+            <div className="shrink-0 flex flex-col gap-3 text-center">
+              <Link href="/sponsor" className="rounded-xl bg-amber-500 text-white font-bold px-8 py-3.5 hover:bg-amber-400 transition-all hover:scale-105 shadow-lg shadow-amber-500/20">Become a Sponsor →</Link>
+              <a href="#check" className="rounded-xl bg-white/10 border border-white/20 text-white font-semibold px-8 py-3 hover:bg-white/20 transition-all text-sm">Donate by Check</a>
+            </div>
+          </div>
+
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {[
               { title: "Stations 1–10 — Bronze Memorials", amount: "$300,000", desc: "Custom bronze relief plaques and polished granite pedestals honoring fallen Central Florida veterans by name.", color: "green" },
@@ -127,21 +155,20 @@ export default function Donate(){
               { title: "Station 11 — Honor Plaza", amount: "~$200,000", desc: "6 life-size bronze Military Working Dog statues, multi-user fitness structure, reflection seating, and flag feature.", color: "amber" },
               { title: "Yellow Building — Intake Office", amount: "$100,000", desc: "Equipment and renovations for the veteran intake and navigation hub — where veterans get connected to housing, healthcare, and workforce support.", color: "green" },
               { title: "QR & VR Education", amount: "$250,000", desc: "Interactive and VR content at all 11 stations — veteran stories, 360° experiences, and school-ready curriculum for K–12 students.", color: "blue" },
+              { title: "Program Operations & Staffing", amount: "$1,850,000", desc: "Veteran intake staff, case managers, program coordinators, and operational costs to run the corridor and intake hub at full capacity for the first 3 years.", color: "purple" },
             ].map(({ title, amount, desc, color }) => (
-              <div key={title} className={`rounded-xl border-2 p-6 ${color === "amber" ? "border-amber-300 bg-amber-50" : color === "blue" ? "border-blue-200 bg-blue-50" : "border-slate-200 bg-white"}`}>
-                <div className={`text-xs uppercase tracking-wide font-semibold mb-1 ${color === "amber" ? "text-amber-700" : color === "blue" ? "text-blue-700" : "text-slate-500"}`}>{title}</div>
-                <div className={`text-2xl font-bold mb-2 ${color === "amber" ? "text-amber-700" : color === "blue" ? "text-blue-700" : "text-[#4A5D3F]"}`}>{amount}</div>
+              <div key={title} className={`rounded-xl border-2 p-6 ${
+                color === "amber" ? "border-amber-300 bg-amber-50" :
+                color === "blue" ? "border-blue-200 bg-blue-50" :
+                color === "purple" ? "border-purple-200 bg-purple-50" :
+                "border-slate-200 bg-white"}`}>
+                <div className={`text-xs uppercase tracking-wide font-semibold mb-1 ${
+                  color === "amber" ? "text-amber-700" : color === "blue" ? "text-blue-700" : color === "purple" ? "text-purple-700" : "text-slate-500"}`}>{title}</div>
+                <div className={`text-2xl font-bold mb-2 ${
+                  color === "amber" ? "text-amber-700" : color === "blue" ? "text-blue-700" : color === "purple" ? "text-purple-700" : "text-[#4A5D3F]"}`}>{amount}</div>
                 <p className="text-sm text-slate-600 leading-relaxed">{desc}</p>
               </div>
             ))}
-            <div className="rounded-xl border-2 border-[#4A5D3F] bg-[#4A5D3F]/5 p-6 flex flex-col justify-between">
-              <div>
-                <div className="text-xs uppercase tracking-wide text-[#4A5D3F] font-semibold mb-1">Total Project</div>
-                <div className="text-3xl font-bold text-[#4A5D3F]">~$1,150,000</div>
-                <p className="mt-2 text-sm text-slate-600">One sponsor, many sponsors, or the whole community — every contribution moves us closer to breaking ground.</p>
-              </div>
-              <Link href="/sponsor" className="mt-5 block text-center rounded-lg bg-[#4A5D3F] text-white text-sm font-semibold px-4 py-2.5 hover:bg-[#3a4a30] transition-colors">Become a Sponsor →</Link>
-            </div>
           </div>
         </Container>
       </section>
