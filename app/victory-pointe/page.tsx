@@ -142,14 +142,15 @@ export default function VictoryPointe(){
                 <li>• Reflection seating integration</li>
                 <li>• Flag feature (if permitted)</li>
               </ul>
-              <div className="mt-4 flex items-center justify-between">
-                <span className="text-xs text-slate-500">Equipment budget</span>
-                <span className="font-bold text-amber-700">$18,000</span>
+              <div className="mt-4 border-t border-amber-200 pt-3">
+                <div className="flex items-center justify-between">
+                  <span className="text-xs text-slate-500">Full plaza sponsorship</span>
+                  <span className="font-bold text-amber-700">~$200,000</span>
+                </div>
               </div>
-              <div className="mt-1 flex items-center justify-between">
-                <span className="text-xs text-slate-500">Full plaza sponsorship</span>
-                <span className="font-bold text-amber-700">~$200,000</span>
-              </div>
+              <a href="/sponsors" className="mt-4 block text-center rounded-lg bg-amber-500 text-white text-sm font-semibold px-4 py-2 hover:bg-amber-600 transition-colors">
+                Sponsor This Plaza →
+              </a>
             </div>
           </div>
 
@@ -272,6 +273,9 @@ function StationCard({ num, flag, branch, subtitle, equipment, manufacturer, not
           <span className="font-semibold text-[#4A5D3F]">$30,000–$50,000</span>
         </div>
       </div>
+      <a href="/sponsors" className="mt-4 block text-center rounded-lg bg-[#4A5D3F] text-white text-sm font-semibold px-4 py-2 hover:bg-[#3a4a30] transition-colors">
+        Sponsor This Station →
+      </a>
     </div>
   );
 }
