@@ -118,16 +118,16 @@ export default function VictoryPointe(){
 
           {/* Station grid */}
           <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            <StationCard num="1" flag="🇺🇸" branch="Army" subtitle="Strength Zone" equipment={["Multi-height pull-up bar system","Dual push-up/dip unit","Optional low crawl lane"]} budget="$11,500" manufacturer="Outdoor-Fit" />
-            <StationCard num="2" flag="🦅" branch="Marine Corps" subtitle="Combat Fitness" equipment={["Parallel dip bars","Elevated push-up platform","Rope climb frame"]} budget="$12,500" manufacturer="Outdoor-Fit" />
-            <StationCard num="3" flag="⚓" branch="Navy" subtitle="Core &amp; Stability" equipment={["Core bench","Incline push-up station","Balance step platforms","Dual push-up/dip"]} budget="$10,000" manufacturer="Greenfields" />
-            <StationCard num="4" flag="✈️" branch="Air Force" subtitle="Agility Zone" equipment={["Plyometric boxes","Agility step platforms","Dual push-up/dip"]} budget="$10,500" manufacturer="Greenfields" />
-            <StationCard num="5" flag="🚨" branch="Coast Guard" subtitle="Rescue Fitness" equipment={["Battle rope anchor station","Pull-up bar","Dual push-up/dip"]} budget="$12,000" manufacturer="Outdoor-Fit" note="Council favorite — hurricane readiness messaging" />
-            <StationCard num="6" flag="🛰️" branch="Space Force" subtitle="Future Readiness" equipment={["Suspension trainer frame","Core trainer","Dual push-up/dip"]} budget="$9,500" manufacturer="Greenfields" />
-            <StationCard num="7" flag="🪖" branch="Special Operations" subtitle="Tribute" equipment={["Monkey bars","Multi-grip pull-ups","Dual push-up/dip"]} budget="$13,000" manufacturer="Outdoor-Fit" note="Hardest station on the corridor" />
-            <StationCard num="8" flag="🚔" branch="Veteran First Responders" subtitle="" equipment={["Functional training frame","Sandbag lift platform","Dual push-up/dip"]} budget="$11,000" manufacturer="Greenfields" />
-            <StationCard num="9" flag="🔧" branch="Skilled Trades" subtitle="Builder Zone" equipment={["Farmer carry handles","Grip strength bars","Sledge training post","Dual push-up/dip"]} budget="$11,500" manufacturer="Outdoor-Fit" note="Direct workforce tie-in" />
-            <StationCard num="10" flag="🧠" branch="Wellness &amp; Recovery" subtitle="" equipment={["Stretching station","Mobility bars","Light push-up/dip"]} budget="$8,500" manufacturer="Greenfields or PlayCore" />
+            <StationCard num="1" flag="🇺🇸" branch="Army" subtitle="Strength Zone" equipment={["Multi-height pull-up bar system","Dual push-up/dip unit","Optional low crawl lane"]} manufacturer="Outdoor-Fit" />
+            <StationCard num="2" flag="🦅" branch="Marine Corps" subtitle="Combat Fitness" equipment={["Parallel dip bars","Elevated push-up platform","Rope climb frame"]} manufacturer="Outdoor-Fit" />
+            <StationCard num="3" flag="⚓" branch="Navy" subtitle="Core &amp; Stability" equipment={["Core bench","Incline push-up station","Balance step platforms","Dual push-up/dip"]} manufacturer="Greenfields" />
+            <StationCard num="4" flag="✈️" branch="Air Force" subtitle="Agility Zone" equipment={["Plyometric boxes","Agility step platforms","Dual push-up/dip"]} manufacturer="Greenfields" />
+            <StationCard num="5" flag="🚨" branch="Coast Guard" subtitle="Rescue Fitness" equipment={["Battle rope anchor station","Pull-up bar","Dual push-up/dip"]} manufacturer="Outdoor-Fit" note="Council favorite — hurricane readiness messaging" />
+            <StationCard num="6" flag="🛰️" branch="Space Force" subtitle="Future Readiness" equipment={["Suspension trainer frame","Core trainer","Dual push-up/dip"]} manufacturer="Greenfields" />
+            <StationCard num="7" flag="🪖" branch="Special Operations" subtitle="Tribute" equipment={["Monkey bars","Multi-grip pull-ups","Dual push-up/dip"]} manufacturer="Outdoor-Fit" note="Hardest station on the corridor" />
+            <StationCard num="8" flag="🚔" branch="Veteran First Responders" subtitle="" equipment={["Functional training frame","Sandbag lift platform","Dual push-up/dip"]} manufacturer="Greenfields" />
+            <StationCard num="9" flag="🔧" branch="Skilled Trades" subtitle="Builder Zone" equipment={["Farmer carry handles","Grip strength bars","Sledge training post","Dual push-up/dip"]} manufacturer="Outdoor-Fit" note="Direct workforce tie-in" />
+            <StationCard num="10" flag="🧠" branch="Wellness &amp; Recovery" subtitle="" equipment={["Stretching station","Mobility bars","Light push-up/dip"]} manufacturer="Greenfields or PlayCore" />
             <div className="rounded-xl border-2 border-amber-400 bg-amber-50 p-6 md:col-span-2 lg:col-span-1">
               <div className="flex items-center gap-2 mb-1">
                 <span className="text-lg font-bold text-amber-700">11</span>
@@ -245,9 +245,9 @@ function PartnerType({ label }:{ label: string }){
   );
 }
 
-function StationCard({ num, flag, branch, subtitle, equipment, budget, manufacturer, note }:{
+function StationCard({ num, flag, branch, subtitle, equipment, manufacturer, note }:{
   num: string; flag: string; branch: string; subtitle: string;
-  equipment: string[]; budget: string; manufacturer: string; note?: string;
+  equipment: string[]; manufacturer: string; note?: string;
 }){
   return (
     <div className="rounded-xl border border-slate-200 bg-white p-6">
@@ -261,9 +261,16 @@ function StationCard({ num, flag, branch, subtitle, equipment, budget, manufactu
       <ul className="text-sm text-slate-600 space-y-1">
         {equipment.map(e => <li key={e}>• <span dangerouslySetInnerHTML={{__html: e}} /></li>)}
       </ul>
-      <div className="mt-4 flex items-center justify-between border-t border-slate-100 pt-3">
-        <span className="text-xs text-slate-400">Equipment budget</span>
-        <span className="font-semibold text-[#4A5D3F]">{budget}</span>
+      <div className="mt-4 border-t border-slate-100 pt-3">
+        <div className="text-xs text-slate-500 font-medium mb-1">Station Sponsorship</div>
+        <div className="flex justify-between text-sm">
+          <span className="text-slate-500">Memorial (bronze + granite)</span>
+          <span className="font-semibold text-[#4A5D3F]">$30,000–$50,000</span>
+        </div>
+        <div className="flex justify-between text-sm mt-1">
+          <span className="text-slate-500">Exercise equipment</span>
+          <span className="font-semibold text-[#4A5D3F]">$30,000–$50,000</span>
+        </div>
       </div>
     </div>
   );
