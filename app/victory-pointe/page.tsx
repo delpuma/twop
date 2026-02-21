@@ -167,7 +167,7 @@ export default function VictoryPointe(){
             </div>
           </div>
 
-          <div className="mt-10 rounded-xl bg-slate-900 text-white p-6 grid md:grid-cols-3 gap-6">
+          <div className="mt-10 rounded-xl bg-slate-900 text-white p-6 grid md:grid-cols-4 gap-6">
             <div>
               <div className="text-xs uppercase tracking-wide opacity-60">Stations 1–10 Memorial Total</div>
               <div className="text-2xl font-bold mt-1">$170,000</div>
@@ -182,6 +182,12 @@ export default function VictoryPointe(){
               <div className="text-xs uppercase tracking-wide opacity-60">Station 11 Honor Plaza</div>
               <div className="text-2xl font-bold mt-1">~$200,000</div>
               <div className="text-xs opacity-60 mt-1">6 bronze dogs + equipment + site</div>
+            </div>
+            <div className="flex flex-col justify-center">
+              <div className="text-xs uppercase tracking-wide opacity-60">Total Project Sponsorship</div>
+              <div className="text-2xl font-bold mt-1">~$480,000</div>
+              <div className="text-xs opacity-60 mt-1">One sponsor, many sponsors, or the whole community</div>
+              <a href="/donate" className="mt-3 inline-block rounded-lg bg-white text-slate-900 text-xs font-semibold px-4 py-2 hover:bg-slate-100 transition-colors">Contribute Now →</a>
             </div>
           </div>
         </Container>
