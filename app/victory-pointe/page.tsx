@@ -128,29 +128,31 @@ export default function VictoryPointe(){
             <StationCard num="8" flag="🚔" branch="Veteran First Responders" subtitle="" equipment={["Functional training frame","Sandbag lift platform","Dual push-up/dip"]} manufacturer="Greenfields" />
             <StationCard num="9" flag="🔧" branch="Skilled Trades" subtitle="Builder Zone" equipment={["Farmer carry handles","Grip strength bars","Sledge training post","Dual push-up/dip"]} manufacturer="Outdoor-Fit" note="Direct workforce tie-in" />
             <StationCard num="10" flag="🧠" branch="Wellness &amp; Recovery" subtitle="" equipment={["Stretching station","Mobility bars","Light push-up/dip"]} manufacturer="Greenfields or PlayCore" />
-            <div className="rounded-xl border-2 border-amber-400 bg-amber-50 p-6 md:col-span-2 lg:col-span-1">
+            <div className="rounded-xl border-2 border-amber-400 bg-amber-50 p-6 md:col-span-2 lg:col-span-3">
               <div className="flex items-center gap-2 mb-1">
                 <span className="text-lg font-bold text-amber-700">11</span>
-                <span className="text-xs uppercase tracking-wide text-amber-700 font-semibold">Signature Piece</span>
+                <span className="text-xs uppercase tracking-wide text-amber-700 font-semibold">Signature Piece — Emotional Centerpiece</span>
               </div>
-              <div className="font-semibold text-lg">🏆 Victory Pointe Honor Plaza</div>
-              <div className="text-sm text-slate-500 mb-3">KOMPAN or premium Greenfields</div>
-              <ul className="text-sm text-slate-700 space-y-1">
-                <li>• 6 life-size bronze Military Working Dog statues</li>
-                <li>• Multi-user pull-up structure</li>
-                <li>• Dual symbolic push-up/dip</li>
-                <li>• Reflection seating integration</li>
-                <li>• Flag feature (if permitted)</li>
-              </ul>
-              <div className="mt-4 border-t border-amber-200 pt-3">
-                <div className="flex items-center justify-between">
-                  <span className="text-xs text-slate-500">Full plaza sponsorship</span>
-                  <span className="font-bold text-amber-700">~$200,000</span>
+              <div className="font-semibold text-xl mb-1">🏆 Victory Pointe Honor Plaza — Military Working Dog Memorial</div>
+              <p className="text-sm text-slate-600 mb-4">Six life-size bronze statues honoring the most legendary Military Working Dogs in American history. Each dog represents a branch of service, a theater of war, and a bond between handler and dog that saved lives. Alongside the memorial: a multi-user fitness structure, reflection seating, and flag feature.</p>
+              <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+                <DogCard name="Nemo" branch="U.S. Air Force — Vietnam" summary="Shot through the nose charging an enemy soldier, Nemo crawled back to his wounded handler and lay on top of him to guard him until help arrived. He lost his right eye. His handler, Airman Bob Throneburg, earned the Purple Heart and Bronze Star." />
+                <DogCard name="Stubby" branch="U.S. Army — WWI" summary="A stray smuggled to Europe, Stubby served in 17 battles, alerted soldiers to gas attacks, and captured a German spy. He became the first dog to receive a rank — Sergeant — from the U.S. armed forces." />
+                <DogCard name="Lucca" branch="U.S. Marine Corps — Iraq &amp; Afghanistan" summary="Led nearly 400 patrols and identified ~40 IEDs over 6 years. Not a single Marine was injured under her watch. She lost her front left leg to a second IED in 2012 and was medically retired a hero." />
+                <DogCard name="Gabe" branch="U.S. Army — Iraq" summary="A pound puppy turned war hero. Gabe completed 170 combat patrols and made 26 finds of insurgent explosives and weapons. After retiring, he visited wounded soldiers and children in hospitals." />
+                <DogCard name="Chips" branch="U.S. Army — WWII" summary="During the invasion of Sicily in 1943, Chips charged an enemy machine gun team firing on his platoon — taking a scalp wound and powder burns — and is credited with saving the lives of his human teammates." />
+                <DogCard name="Cairo" branch="U.S. Navy SEALs" summary="The only military dog on Operation Neptune Spear — the mission that killed Osama Bin Laden in May 2011. Cairo secured the perimeter of the compound and was responsible for catching anyone who tried to escape." />
+              </div>
+              <div className="mt-6 border-t border-amber-200 pt-4 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+                <div>
+                  <div className="text-xs text-slate-500 font-medium">Full Plaza Sponsorship</div>
+                  <div className="text-2xl font-bold text-amber-700">~$200,000</div>
+                  <div className="text-xs text-slate-400">6 bronze dogs + fitness structure + site &amp; installation</div>
                 </div>
+                <a href="/sponsors" className="shrink-0 rounded-lg bg-amber-500 text-white text-sm font-semibold px-6 py-3 hover:bg-amber-600 transition-colors">
+                  Sponsor This Plaza →
+                </a>
               </div>
-              <a href="/sponsors" className="mt-4 block text-center rounded-lg bg-amber-500 text-white text-sm font-semibold px-4 py-2 hover:bg-amber-600 transition-colors">
-                Sponsor This Plaza →
-              </a>
             </div>
           </div>
 
@@ -242,6 +244,16 @@ function PartnerType({ label }:{ label: string }){
   return (
     <div className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm text-slate-700 flex items-center gap-2">
       <span className="text-[#4A5D3F] font-bold">✓</span> {label}
+    </div>
+  );
+}
+
+function DogCard({ name, branch, summary }:{ name: string; branch: string; summary: string }){
+  return (
+    <div className="rounded-lg bg-white border border-amber-200 p-4">
+      <div className="font-bold text-amber-800">{name}</div>
+      <div className="text-xs text-amber-600 mb-2">{branch}</div>
+      <p className="text-xs text-slate-600 leading-relaxed">{summary}</p>
     </div>
   );
 }
