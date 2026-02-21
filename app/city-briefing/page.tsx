@@ -48,7 +48,7 @@ export default function CityBriefing(){
             <div className="font-semibold">Key program economics (planning numbers)</div>
             <p className="mt-2 text-sm text-slate-700">
               Stabilization phase cost target: <b>$2,800–$3,500 per veteran per month</b> (housing + food + case management + workforce support + medical navigation).
-              Target initial cohort: <b>20–30 veterans</b>. Planning target facility size for 30 residents (dignified dorm model): <b>~9,000–12,000 sq ft</b>.
+              Target initial residential cohort: <b>20–30 veterans</b> accepted into our housing, training, and reintegration program at a time. Most graduate into stable independent housing within <b>9–12 months</b>, allowing us to transition the next veteran in and continue the cycle. Long-term goal: serve <b>thousands of veterans annually</b> through direct services, navigation, and community support. Planning target facility size for 30 residents (dignified dorm model): <b>~9,000–12,000 sq ft</b>.
             </p>
           </div>
         </Container>

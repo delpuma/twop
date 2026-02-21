@@ -27,7 +27,7 @@ export default function Home(){
           </div>
 
           <div className="mt-10 grid gap-4 md:grid-cols-4">
-            <Stat label="Initial local cohort" value="20–30 veterans" />
+            <Stat label="Residential cohort" value="20–30 veterans" sub="9–12 mo. to graduation" />
             <Stat label="Stabilization cost" value="$2,800–$3,500 / mo" />
             <Stat label="Year 1 regional impact" value="$1.2M–$1.8M" />
             <Stat label="Funding model" value="Public-private partnership" />
@@ -103,7 +103,15 @@ export default function Home(){
   );
 }
 
-function Stat({ label, value }:{ label: string; value: string }){
+function Stat({ label, value, sub }:{ label: string; value: string; sub?: string }){
+  return (
+    <div className="text-center">
+      <div className="text-3xl font-bold text-[#4A5D3F]">{value}</div>
+      <div className="mt-1 text-sm text-slate-600">{label}</div>
+      {sub && <div className="mt-0.5 text-xs text-slate-400">{sub}</div>}
+    </div>
+  );
+}
   return (
     <div className="rounded-xl border border-slate-200 bg-white p-5">
       <div className="text-xs uppercase tracking-wide text-slate-500">{label}</div>

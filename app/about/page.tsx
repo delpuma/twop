@@ -31,7 +31,7 @@ export default function About(){
               <ul className="mt-4 space-y-3 text-slate-700">
                 <li className="flex gap-3">
                   <span className="text-[#4A5D3F] font-bold">→</span>
-                  <span><strong>Housing:</strong> Transitional housing for 20–30 veterans in a dignified, supportive environment</span>
+                  <span><strong>Housing:</strong> Our residential program accepts 20–30 veterans at a time into structured housing, training, and reintegration — most graduate into stable independent housing within 9–12 months, allowing us to transition the next veteran in. Our goal is to serve thousands of veterans annually through direct services.</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-[#4A5D3F] font-bold">→</span>

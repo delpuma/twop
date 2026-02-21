@@ -20,7 +20,7 @@ export default function Programs(){
             title="Transitional Housing"
             description="Safe, dignified housing for veterans in crisis or transition"
             details={[
-              "20-30 bed capacity in Phase 1",
+              "20-30 veterans accepted into residential program at a time — graduates into stable housing in 9-12 months, cycling in the next veteran. Goal: thousands served annually",
               "Private or semi-private rooms with shared common areas",
               "On-site case management and peer support",
               "Average stay: 6-18 months depending on individual needs",

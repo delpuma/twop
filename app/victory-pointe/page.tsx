@@ -177,7 +177,7 @@ export default function VictoryPointe(){
         <Container className="py-12">
           <h2 className="text-2xl font-semibold">Veteran Intake &amp; Support Hub</h2>
           <p className="mt-3 text-slate-600 max-w-3xl">
-            At the existing yellow building at Victory Pointe, Warrior Outreach will establish an Intake &amp; Navigation Office to connect veterans to healthcare providers, coordinate housing assistance, facilitate workforce placement, and provide peer support navigation. Our goal is to initially house and support 20–30 veterans locally, expanding as partnerships grow.
+            At the existing yellow building at Victory Pointe, Warrior Outreach will establish an Intake &amp; Navigation Office. Our residential program accepts 20–30 veterans at a time into structured housing, workforce training, and reintegration support — most graduate into stable independent housing within 9–12 months, allowing us to transition the next veteran in and continue the cycle. Our long-term goal is to serve thousands of veterans annually through direct services, healthcare navigation, and community support.
           </p>
           <div className="mt-8 grid gap-6 md:grid-cols-3">
             <ProgramCard title="Housing" body="Transitional housing with structured support — designed to move veterans toward independence, not dependency." />
