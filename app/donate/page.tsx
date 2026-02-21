@@ -33,7 +33,7 @@ export default function Donate(){
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <a href="#campaigns" className="rounded-xl bg-amber-500 text-white font-bold px-8 py-4 hover:bg-amber-400 transition-all hover:scale-105 shadow-lg shadow-amber-500/20">Donate Now →</a>
-              <a href="#check" className="rounded-xl bg-white/10 border border-white/20 text-white font-bold px-8 py-4 hover:bg-white/20 transition-all">Donate by Check</a>
+              <a href="#mail" className="rounded-xl bg-white/10 border border-white/20 text-white font-bold px-8 py-4 hover:bg-white/20 transition-all">Donate by Check</a>
             </div>
             <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 border-t border-white/10 pt-10">
               {[
@@ -86,7 +86,7 @@ export default function Donate(){
                   <span className="text-slate-500">Goal</span>
                   <span className="font-bold text-slate-900">$150,000</span>
                 </div>
-                <a href="#check" className="block text-center rounded-lg bg-[#4A5D3F] text-white font-semibold px-4 py-2.5 hover:bg-[#3a4a30] transition-colors text-sm">Donate to This Fund →</a>
+                <a href="#mail" className="block text-center rounded-lg bg-[#4A5D3F] text-white font-semibold px-4 py-2.5 hover:bg-[#3a4a30] transition-colors text-sm">Donate to This Fund →</a>
               </div>
             </div>
 
@@ -103,7 +103,7 @@ export default function Donate(){
                   <span className="text-slate-500">Goal</span>
                   <span className="font-bold text-slate-900">$3M private + $3M public</span>
                 </div>
-                <a href="#check" className="block text-center rounded-lg bg-[#4A5D3F] text-white font-semibold px-4 py-2.5 hover:bg-[#3a4a30] transition-colors text-sm">Donate to Victory Pointe →</a>
+                <a href="#mail" className="block text-center rounded-lg bg-[#4A5D3F] text-white font-semibold px-4 py-2.5 hover:bg-[#3a4a30] transition-colors text-sm">Donate to Victory Pointe →</a>
               </div>
             </div>
 
@@ -120,7 +120,7 @@ export default function Donate(){
                   <span className="text-slate-500">Goal per bus</span>
                   <span className="font-bold text-slate-900">$125,000</span>
                 </div>
-                <a href="#check" className="block text-center rounded-lg bg-orange-500 text-white font-semibold px-4 py-2.5 hover:bg-orange-600 transition-colors text-sm">Fund a Wash Bus →</a>
+                <a href="#mail" className="block text-center rounded-lg bg-orange-500 text-white font-semibold px-4 py-2.5 hover:bg-orange-600 transition-colors text-sm">Fund a Wash Bus →</a>
               </div>
             </div>
 
@@ -144,7 +144,7 @@ export default function Donate(){
             </div>
             <div className="shrink-0 flex flex-col gap-3 text-center">
               <Link href="/sponsor" className="rounded-xl bg-amber-500 text-white font-bold px-8 py-3.5 hover:bg-amber-400 transition-all hover:scale-105 shadow-lg shadow-amber-500/20">Become a Sponsor →</Link>
-              <a href="#check" className="rounded-xl bg-white/10 border border-white/20 text-white font-semibold px-8 py-3 hover:bg-white/20 transition-all text-sm">Donate by Check</a>
+              <a href="#mail" className="rounded-xl bg-white/10 border border-white/20 text-white font-semibold px-8 py-3 hover:bg-white/20 transition-all text-sm">Donate by Check</a>
             </div>
           </div>
 
@@ -174,7 +174,7 @@ export default function Donate(){
       </section>
 
       {/* CHECK DONATIONS */}
-      <section id="check" className="bg-slate-50 border-b border-slate-200">
+      <section id="mail" className="bg-slate-50 border-b border-slate-200">
         <Container className="py-16">
           <div className="text-xs uppercase tracking-widest text-[#4A5D3F] font-semibold mb-2 text-center">Prefer to write a check?</div>
           <h2 className="text-3xl font-bold text-center mb-10">Donate by Mail</h2>

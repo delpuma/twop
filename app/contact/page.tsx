@@ -96,7 +96,13 @@ export default function Contact(){
                 </div>
               </div>
 
-              <div className="mt-10 rounded-xl bg-[#4A5D3F]/5 border border-[#4A5D3F]/20 p-5">
+              <div className="mt-10 rounded-xl bg-amber-50 border border-amber-200 p-5">
+                <div className="font-semibold text-amber-800">✍️ Haven't signed the Victory Pointe petition yet?</div>
+                <p className="mt-1 text-sm text-slate-600">Add your name to show community support for the veteran fitness corridor in Clermont, FL — it takes 30 seconds.</p>
+                <a href="/victory-pointe#sign" className="mt-3 inline-block rounded-lg bg-amber-500 text-white text-sm font-semibold px-5 py-2 hover:bg-amber-400 transition-colors">Sign the Petition →</a>
+              </div>
+
+              <div className="mt-6 rounded-xl bg-[#4A5D3F]/5 border border-[#4A5D3F]/20 p-5">
                 <div className="font-semibold text-[#4A5D3F]">🆘 Veteran in crisis?</div>
                 <p className="mt-1 text-sm text-slate-600">If you or someone you know needs immediate help, call the Veterans Crisis Line: <strong>988 then press 1</strong>, or visit our <a href="/resources" className="text-[#4A5D3F] underline">Resources page</a> for more options.</p>
               </div>

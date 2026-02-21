@@ -71,7 +71,10 @@ export default function VictoryPointe(){
       <div className="bg-amber-500 text-white">
         <Container className="py-3 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-sm font-semibold">📣 Help us bring Victory Pointe to life — add your name to the community support list.</p>
-          <a href="#sign" className="shrink-0 rounded-lg bg-white text-amber-600 font-bold text-sm px-5 py-2 hover:bg-amber-50 transition-colors">Sign Now →</a>
+          <div className="flex gap-2 shrink-0">
+            <a href="#sign" className="rounded-lg bg-white text-amber-600 font-bold text-sm px-5 py-2 hover:bg-amber-50 transition-colors">Sign Now →</a>
+            <a href="/donate#mail" className="rounded-lg bg-amber-700 text-white font-bold text-sm px-5 py-2 hover:bg-amber-800 transition-colors">Donate by Mail →</a>
+          </div>
         </Container>
       </div>
 
@@ -105,7 +108,7 @@ export default function VictoryPointe(){
                 Signatures demonstrate public backing and help unlock sponsor participation. Support totals may be shared as aggregate counts with City leadership.
               </p>
               <div className="mt-5">
-                <SignatureForm onDone={load} />
+                <SignatureForm onDone={load} supporters={stats.supporters} />
               </div>
               <p className="mt-4 text-xs text-slate-500">
                 We will not sell your information. You can unsubscribe from updates at any time.

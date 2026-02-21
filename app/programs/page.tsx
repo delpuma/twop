@@ -80,6 +80,15 @@ export default function Programs(){
             ]}
           />
 
+          {/* Inline donation nudge after housing */}
+          <div className="rounded-xl bg-amber-50 border border-amber-200 p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <div>
+              <div className="font-semibold text-amber-800">🏠 $2,800 covers one veteran for a full month</div>
+              <p className="text-sm text-slate-600 mt-0.5">Housing, food, case management, healthcare navigation, and workforce support — all in.</p>
+            </div>
+            <a href="/donate#mail" className="shrink-0 rounded-lg bg-amber-500 text-white font-semibold text-sm px-5 py-2.5 hover:bg-amber-400 transition-colors">Donate by Mail →</a>
+          </div>
+
           <ProgramCard
             emoji="🏥"
             color="red"

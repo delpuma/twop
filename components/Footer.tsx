@@ -25,7 +25,7 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div>
               <div className="font-bold text-lg">Stay in the fight. Get updates.</div>
-              <p className="text-sm text-white/60 mt-1">Mission updates, events, and ways to support veterans.</p>
+              <p className="text-sm text-white/60 mt-1">Mission updates, events, and ways to support veterans. <a href="/victory-pointe#sign" className="text-amber-400 hover:text-amber-300 font-semibold">Or sign the Victory Pointe petition →</a></p>
             </div>
             {status === "ok" ? (
               <div className="text-amber-400 font-semibold text-sm">✓ You're subscribed!</div>
@@ -71,16 +71,13 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <div className="font-semibold text-slate-900 mb-3">Contact</div>
+            <div className="font-semibold text-slate-900 mb-3">Donate by Mail</div>
+            <p className="text-xs text-slate-500 mb-2">Make checks payable to: <span className="font-semibold text-slate-700">The Warrior Outreach Project</span></p>
             <p className="text-xs leading-relaxed">
-              info@thewarrioroutreachproject.org<br/>
-              (212) 729-0453<br/><br/>
-              <span className="font-medium">567 Tompkins Ave Unit 50427</span><br/>
-              Staten Island, NY 10305<br/><br/>
-              <span className="font-medium">11505 Pineloch Loop</span><br/>
-              Clermont, FL 34711<br/><br/>
-              Expanding across the East Coast
+              <span className="font-medium">NYC:</span> 567 Tompkins Ave Unit 50427<br/>Staten Island, NY 10305<br/><br/>
+              <span className="font-medium">Florida:</span> 11505 Pineloch Loop<br/>Clermont, FL 34711
             </p>
+            <a href="/donate#mail" className="mt-3 inline-block text-xs text-[#4A5D3F] font-semibold hover:underline">Full donation info →</a>
           </div>
         </div>
         <div className="mt-8 pt-6 border-t border-slate-200 text-xs flex flex-col md:flex-row items-center justify-between gap-2 text-center md:text-left">

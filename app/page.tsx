@@ -192,10 +192,11 @@ export default async function Home(){
           <h2 className="text-4xl font-black tracking-tight">Ready to make a difference?</h2>
           <p className="mt-4 text-slate-400 max-w-xl mx-auto">Every action — big or small — moves a veteran closer to stability, purpose, and home.</p>
           <div className="mt-10 flex flex-wrap justify-center gap-4">
-            <Link href="/donate" className="rounded-xl bg-amber-500 text-white font-bold px-8 py-4 hover:bg-amber-400 transition-all hover:scale-105 text-base shadow-lg shadow-amber-500/20">Donate Now →</Link>
-            <Link href="/volunteer" className="rounded-xl bg-white/10 border border-white/20 text-white font-bold px-8 py-4 hover:bg-white/20 transition-all text-base">Volunteer</Link>
-            <Link href="/sponsor" className="rounded-xl border border-white/10 text-white/70 font-medium px-8 py-4 hover:text-white hover:border-white/30 transition-all text-base">Sponsor a Station</Link>
+            <Link href="/donate" className="rounded-xl bg-amber-500 text-white font-bold px-10 py-4 hover:bg-amber-400 transition-all hover:scale-105 text-base shadow-lg shadow-amber-500/20">Donate Now →</Link>
+            <Link href="/victory-pointe#sign" className="rounded-xl bg-white/10 border border-white/20 text-white font-bold px-8 py-4 hover:bg-white/20 transition-all text-base">✍️ Sign the Petition</Link>
+            <Link href="/volunteer" className="rounded-xl border border-white/10 text-white/70 font-medium px-8 py-4 hover:text-white hover:border-white/30 transition-all text-base">Volunteer</Link>
           </div>
+          <p className="mt-8 text-slate-500 text-sm">Prefer to write a check? Mail to: <span className="text-slate-300 font-medium">The Warrior Outreach Project, 11505 Pineloch Loop, Clermont FL 34711</span> — <Link href="/donate#mail" className="text-amber-400 hover:text-amber-300">full details →</Link></p>
         </Container>
       </section>
 
