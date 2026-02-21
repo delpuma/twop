@@ -5,6 +5,8 @@ import Link from "next/link";
 import Container from "../../components/Container";
 import SignatureForm from "../../components/SignatureForm";
 import ProposalSlider from "../../components/ProposalSlider";
+import dynamic from "next/dynamic";
+const VictoryPointeMap = dynamic(() => import("../../components/VictoryPointeMap"), { ssr: false });
 
 type Stats = { supporters: number; sponsors: number; pledged: number; letters: number };
 
@@ -85,6 +87,34 @@ export default function VictoryPointe(){
       </section>
 
       <ProposalSlider />
+
+      {/* MAP SECTION */}
+      <section className="bg-slate-50 border-y border-slate-200">
+        <Container className="py-12">
+          <h2 className="text-2xl font-semibold">Where Is Victory Pointe?</h2>
+          <p className="mt-3 text-slate-600 max-w-3xl">
+            Victory Pointe is a City of Clermont waterfront park on Lake Minneola — one of the most visited public spaces in Central Florida. The proposed ~1-mile veteran fitness corridor runs along the existing lakeside trail from the main park entrance to the yellow building near the boat ramp, which will serve as the Veteran Intake &amp; Navigation Hub. All 11 stations follow the existing paved path — no new infrastructure required.
+          </p>
+          <div className="mt-4 grid gap-3 md:grid-cols-3 text-sm">
+            <div className="rounded-lg bg-white border border-slate-200 p-4">
+              <div className="font-semibold text-[#4A5D3F]">📍 Location</div>
+              <p className="mt-1 text-slate-600">Victory Pointe Park, 330 S. 12th St, Clermont, FL 34711 — on the shores of Lake Minneola</p>
+            </div>
+            <div className="rounded-lg bg-white border border-slate-200 p-4">
+              <div className="font-semibold text-[#4A5D3F]">🏃 Trail Length</div>
+              <p className="mt-1 text-slate-600">~1 mile of existing paved lakeside trail. 11 stations spaced evenly. Connects to the South Lake Trail regional network (75+ miles).</p>
+            </div>
+            <div className="rounded-lg bg-yellow-50 border border-yellow-200 p-4">
+              <div className="font-semibold text-yellow-700">🏠 Yellow Building</div>
+              <p className="mt-1 text-slate-600">Existing City structure near the boat ramp — proposed as the Veteran Intake Hub for case management, navigation, and support services.</p>
+            </div>
+          </div>
+          <div className="mt-6">
+            <VictoryPointeMap />
+          </div>
+          <p className="mt-3 text-xs text-slate-400">Map data © OpenStreetMap contributors. Station positions are approximate planning coordinates along the existing trail.</p>
+        </Container>
+      </section>
 
       {/* STATIONS DETAIL */}
       <section className="bg-white border-b border-slate-200">
