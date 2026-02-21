@@ -78,7 +78,7 @@ export default function About(){
                   { emoji: "🔧", label: "Workforce", desc: "Construction, skilled trades, disaster response, hospitality (IG Hotels), and small business ownership pathways." },
                   { emoji: "🍽️", label: "Basic Needs", desc: "Food, clothing, transportation, emergency financial assistance, and case management." },
                   { emoji: "🤝", label: "Community", desc: "Peer mentorship, group support, service projects, and an alumni network that keeps veterans connected." },
-                  { emoji: "🏆", label: "Victory Pointe", desc: "A nationally distinctive veteran fitness & memorial corridor in Clermont, FL — with intake hub, Honor Plaza, and QR/VR education at every station." },
+                  { emoji: "🏆", label: "Victory Pointe (Proposed 2026–2027)", desc: "A proposed nationally distinctive veteran fitness & memorial corridor in Clermont, FL — with intake hub, Honor Plaza, and QR/VR education at every station. Currently in proposal phase with the City of Clermont." },
                 ].map(({ emoji, label, desc }) => (
                   <div key={label} className="flex gap-4">
                     <div className="w-9 h-9 rounded-lg bg-[#4A5D3F]/10 flex items-center justify-center text-lg shrink-0">{emoji}</div>

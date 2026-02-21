@@ -36,7 +36,7 @@ export default function HomeHero({ supporters, letters }: { supporters: number; 
 
         {/* Subtext */}
         <p className="fade-up mt-6 text-lg md:text-xl text-white/70 leading-relaxed max-w-2xl" style={{ animationDelay: "200ms" }}>
-          A veteran-led nonprofit providing housing, healthcare navigation, workforce training, and building a nationally distinctive veteran corridor at Victory Pointe in Clermont, Florida.
+          A veteran-led nonprofit providing housing, healthcare navigation, workforce training, and proposing a nationally distinctive veteran corridor at Victory Pointe in Clermont, Florida (proposed 2026–2027).
         </p>
 
         {/* CTAs */}

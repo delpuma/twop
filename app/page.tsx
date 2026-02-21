@@ -67,7 +67,7 @@ export default async function Home(){
               { emoji: "🏠", title: "Transitional Housing", desc: "20–30 veterans in structured residential program at a time. Most graduate to independent housing in 9–12 months.", href: "/programs" },
               { emoji: "🏥", title: "Healthcare Navigation", desc: "Cut through VA red tape. Connect to medical care, mental health support, and benefits veterans have earned.", href: "/programs" },
               { emoji: "🔧", title: "Workforce Development", desc: "Construction, skilled trades, disaster response, hospitality (IG Hotels), and small business ownership pathways.", href: "/programs" },
-              { emoji: "🏆", title: "Victory Pointe Corridor", desc: "11 branch-themed fitness stations, bronze memorials, Military Working Dog Honor Plaza, and QR/VR education in Clermont, FL.", href: "/victory-pointe" },
+              { emoji: "🏆", title: "Victory Pointe Corridor", desc: "Proposed 2026–2027 — 11 branch-themed fitness stations, bronze memorials, Military Working Dog Honor Plaza, and QR/VR education in Clermont, FL. Currently in proposal phase.", href: "/victory-pointe" },
               { emoji: "🍽️", title: "Basic Needs & Stabilization", desc: "Meals, clothing, transportation, emergency financial assistance, and case management — no barriers.", href: "/programs" },
               { emoji: "🤝", title: "Peer Support & Community", desc: "Mentorship from veterans who've made it through. Group support, service projects, and an alumni network.", href: "/programs" },
             ].map(({ emoji, title, desc, href }) => (
@@ -117,10 +117,10 @@ export default async function Home(){
         <Container className="py-20">
           <div className="grid gap-12 md:grid-cols-2 items-center">
             <div>
-              <div className="text-xs uppercase tracking-widest text-[#4A5D3F] font-semibold mb-3">Clermont, Florida</div>
-              <h2 className="text-4xl font-black tracking-tight leading-snug">Victory Pointe — A nationally distinctive veteran corridor.</h2>
+              <div className="text-xs uppercase tracking-widest text-[#4A5D3F] font-semibold mb-3">Clermont, Florida · Proposed 2026–2027</div>
+              <h2 className="text-4xl font-black tracking-tight leading-snug">Victory Pointe — A proposed nationally distinctive veteran corridor.</h2>
               <p className="mt-4 text-slate-600 leading-relaxed">
-                11 branch-themed fitness stations along the South Lake Trail. Bronze memorials honoring fallen Central Florida veterans. A Military Working Dog Honor Plaza. QR/VR education at every station. And a veteran intake office at the existing yellow building on-site.
+                Currently in proposal phase with the City of Clermont. If approved, 11 branch-themed fitness stations along the South Lake Trail, bronze memorials honoring fallen Central Florida veterans, a Military Working Dog Honor Plaza, QR/VR education at every station, and a veteran intake office at the existing yellow building on-site.
               </p>
               <div className="mt-6 grid grid-cols-2 gap-4">
                 {[
