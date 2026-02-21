@@ -1,7 +1,20 @@
 "use client";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
-export default function HomeHero({ supporters, letters }: { supporters: number; letters: number }) {
+export default function HomeHero({ supporters: initialSupporters, letters }: { supporters: number; letters: number }) {
+  const [supporters, setSupporters] = useState(initialSupporters);
+  const GOAL = 1000;
+
+  useEffect(() => {
+    fetch("/api/public/stats", { cache: "no-store" })
+      .then(r => r.json())
+      .then(j => { if (j?.ok) setSupporters(j.stats.supporters); })
+      .catch(() => {});
+  }, []);
+
+  const pct = Math.min(100, Math.round((supporters / GOAL) * 100));
+
   return (
     <section className="relative bg-[#1a2416] text-white overflow-hidden min-h-[92vh] flex items-center">
 
@@ -53,18 +66,35 @@ export default function HomeHero({ supporters, letters }: { supporters: number; 
         </div>
 
         {/* Stats row */}
-        <div className="fade-up mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 border-t border-white/10 pt-10" style={{ animationDelay: "400ms" }}>
-          {[
-            { value: supporters > 0 ? supporters.toLocaleString() : "—", label: "Community Supporters" },
-            { value: "20–30", label: "Veterans per cohort" },
-            { value: "$2,800/mo", label: "All-in stabilization cost" },
-            { value: "9–12 mo", label: "Average time to housing" },
-          ].map(({ value, label }) => (
-            <div key={label}>
-              <div className="text-3xl font-black text-amber-400">{value}</div>
-              <div className="mt-1 text-sm text-white/50">{label}</div>
+        <div className="fade-up mt-16 border-t border-white/10 pt-10" style={{ animationDelay: "400ms" }}>
+          {/* Signature goal progress */}
+          <div className="mb-8">
+            <div className="flex items-end justify-between mb-2">
+              <div>
+                <div className="text-3xl font-black text-amber-400">{supporters > 0 ? supporters.toLocaleString() : "—"}</div>
+                <div className="mt-1 text-sm text-white/50">Community Supporters — Victory Pointe Signature Goal</div>
+              </div>
+              <div className="text-right">
+                <div className="text-sm font-bold text-white/70">{pct}%</div>
+                <div className="text-xs text-white/40">of {GOAL.toLocaleString()}</div>
+              </div>
             </div>
-          ))}
+            <div className="h-2 rounded-full bg-white/10 overflow-hidden">
+              <div className="h-full rounded-full bg-amber-400 transition-all duration-700" style={{ width: `${pct}%` }} />
+            </div>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+            {[
+              { value: "20–30", label: "Veterans per cohort" },
+              { value: "$2,800/mo", label: "All-in stabilization cost" },
+              { value: "9–12 mo", label: "Average time to housing" },
+            ].map(({ value, label }) => (
+              <div key={label}>
+                <div className="text-3xl font-black text-amber-400">{value}</div>
+                <div className="mt-1 text-sm text-white/50">{label}</div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 

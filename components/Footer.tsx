@@ -38,7 +38,15 @@ export default function Footer() {
             </p>
           </div>
         </div>
-        <div className="mt-8 pt-6 border-t border-slate-200 text-xs text-center md:text-left">© {new Date().getFullYear()} The Warrior Outreach Project. All rights reserved.</div>
+        <div className="mt-8 pt-6 border-t border-slate-200 text-xs flex flex-col md:flex-row items-center justify-between gap-2 text-center md:text-left">
+          <div>
+            <span className="font-semibold text-slate-700">The Warrior Outreach Project</span> is a 501(c)(3) nonprofit organization. All donations are tax-deductible.<br />
+            © {new Date().getFullYear()} The Warrior Outreach Project. All rights reserved.
+          </div>
+          <a href="https://delpuma.com" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-[#4A5D3F] transition-colors shrink-0">
+            Developed by DelPuma Consulting Group
+          </a>
+        </div>
       </Container>
     </footer>
   );
