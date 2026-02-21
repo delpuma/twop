@@ -81,10 +81,10 @@ export default function VictoryPointe(){
               <h2 className="text-xl font-semibold">What this creates for Clermont</h2>
               <ul className="mt-4 list-disc pl-5 space-y-2 text-slate-700">
                 <li>11 branch-themed fitness stations along the existing Victory Pointe trail</li>
-                <li>Each station features branch-themed outdoor exercise equipment <strong>and</strong> a custom bronze relief memorial with granite pedestal honoring fallen Central Florida veterans</li>
+                <li>Each station features branch-themed outdoor exercise equipment <strong>and</strong> a custom bronze sculpture memorial with granite pedestal honoring fallen Central Florida veterans</li>
                 <li>Dual push-up/dip stations at each location — 22 total, symbolizing the mission to reduce the 22 veteran suicides per day</li>
                 <li>QR memorial storytelling honoring local veterans at every station</li>
-                <li>Station 11: Victory Pointe Honor Plaza — signature Military Working Dog Memorial with 6 life-size bronze dogs</li>
+                <li>Station 11: Victory Pointe Honor Plaza — signature Military Working Dog Memorial with 6 life-size bronze sculptures</li>
                 <li>Uses existing trail, waterfront, and parking — minimal new infrastructure</li>
                 <li>Veteran Intake &amp; Navigation Office at the existing yellow building at Victory Pointe</li>
                 <li>Workforce pipeline: construction, repairs, skilled trades, and emergency-response support</li>
@@ -161,7 +161,7 @@ export default function VictoryPointe(){
         <Container className="py-14">
           <h2 className="text-3xl font-semibold">The 11 Stations</h2>
           <p className="mt-3 text-slate-600 max-w-3xl">
-            Each station honors a branch of service with two components: branch-themed outdoor fitness equipment and a custom bronze relief memorial on a polished granite pedestal — where fallen Central Florida veterans can be remembered by name.
+            Each station honors a branch of service with two components: branch-themed outdoor fitness equipment and a custom bronze sculpture memorial on a polished granite pedestal — where fallen Central Florida veterans can be remembered by name.
           </p>
 
           {/* Memorial sponsorship callout */}
@@ -169,8 +169,8 @@ export default function VictoryPointe(){
             <div className="rounded-xl border-2 border-[#4A5D3F] bg-[#4A5D3F]/5 p-6">
               <div className="text-xs uppercase tracking-wide text-[#4A5D3F] font-semibold">Memorial Sponsorship</div>
               <div className="mt-2 text-2xl font-bold text-slate-900">$30,000 – $50,000</div>
-              <p className="mt-2 text-sm text-slate-600">Sponsor a station memorial: custom bronze relief plaque (24–30″), polished granite pedestal with etched names, and installation. Your organization’s name honored at the station permanently.</p>
-              <div className="mt-3 text-xs text-slate-500">Bronze relief: ~$10k &bull; Granite base: ~$5k &bull; Install: ~$2k &bull; Per station: ~$17k</div>
+              <p className="mt-2 text-sm text-slate-600">Sponsor a station memorial: custom bronze sculpture, polished granite pedestal with etched names, and installation. Your organization’s name honored at the station permanently.</p>
+              <div className="mt-3 text-xs text-slate-500">Bronze sculpture: ~$10k &bull; Granite base: ~$5k &bull; Install: ~$2k &bull; Per station: ~$17k</div>
             </div>
             <div className="rounded-xl border-2 border-slate-300 bg-slate-50 p-6">
               <div className="text-xs uppercase tracking-wide text-slate-500 font-semibold">Equipment Sponsorship</div>
@@ -181,8 +181,8 @@ export default function VictoryPointe(){
             <div className="rounded-xl border-2 border-amber-400 bg-amber-50 p-6">
               <div className="text-xs uppercase tracking-wide text-amber-700 font-semibold">Station 11 — Honor Plaza</div>
               <div className="mt-2 text-2xl font-bold text-slate-900">~$200,000</div>
-              <p className="mt-2 text-sm text-slate-600">The emotional centerpiece: 6 life-size bronze Military Working Dog statues, multi-user fitness structure, reflection seating, and flag feature. The signature landmark of the entire corridor.</p>
-              <div className="mt-3 text-xs text-slate-500">Life-size bronze dogs: $20k–$35k each &bull; Premium equipment: $18k &bull; Site &amp; install included</div>
+              <p className="mt-2 text-sm text-slate-600">The emotional centerpiece: 6 life-size bronze Military Working Dog sculptures, multi-user fitness structure, reflection seating, and flag feature. The signature landmark of the entire corridor.</p>
+              <div className="mt-3 text-xs text-slate-500">Life-size bronze sculptures: $20k–$35k each &bull; Premium equipment: $18k &bull; Site &amp; install included</div>
             </div>
           </div>
 
@@ -208,14 +208,14 @@ export default function VictoryPointe(){
             <StationCard num="7" flag="🪖" branch="Special Operations" subtitle="Tribute" equipment={["Monkey bars","Multi-grip pull-ups","Dual push-up/dip"]} manufacturer="Outdoor-Fit" note="Hardest station on the corridor" />
             <StationCard num="8" flag="🚔" branch="Veteran First Responders" subtitle="" equipment={["Functional training frame","Sandbag lift platform","Dual push-up/dip"]} manufacturer="Greenfields" />
             <StationCard num="9" flag="🔧" branch="Skilled Trades" subtitle="Builder Zone" equipment={["Farmer carry handles","Grip strength bars","Sledge training post","Dual push-up/dip"]} manufacturer="Outdoor-Fit" note="Direct workforce tie-in" />
-            <StationCard num="10" flag="🧠" branch="Wellness &amp; Recovery" subtitle="" equipment={["Stretching station","Mobility bars","Light push-up/dip"]} manufacturer="Greenfields or PlayCore" />
+            <StationCard num="10" flag="♿" branch="Veterans with Disabilities" subtitle="Wellness &amp; Recovery" equipment={["Adaptive stretching station","Mobility bars","Accessible push-up/dip"]} manufacturer="Greenfields or PlayCore" note="Honoring veterans with disabilities — adaptive equipment for all abilities" />
             <div className="rounded-xl border-2 border-amber-400 bg-amber-50 p-6 md:col-span-2 lg:col-span-3">
               <div className="flex items-center gap-2 mb-1">
                 <span className="text-lg font-bold text-amber-700">11</span>
                 <span className="text-xs uppercase tracking-wide text-amber-700 font-semibold">Signature Piece — Emotional Centerpiece</span>
               </div>
               <div className="font-semibold text-xl mb-1">🏆 Victory Pointe Honor Plaza — Military Working Dog Memorial</div>
-              <p className="text-sm text-slate-600 mb-4">Six life-size bronze statues honoring the most legendary Military Working Dogs in American history. Each dog represents a branch of service, a theater of war, and a bond between handler and dog that saved lives. Alongside the memorial: a multi-user fitness structure, reflection seating, and flag feature.</p>
+              <p className="text-sm text-slate-600 mb-4">Six life-size bronze sculptures honoring the most legendary Military Working Dogs in American history. Each dog represents a branch of service, a theater of war, and a bond between handler and dog that saved lives. Alongside the memorial: a multi-user fitness structure, reflection seating, and flag feature.</p>
               <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
                 <DogCard name="Nemo" branch="U.S. Air Force — Vietnam" img="/NemoMilitarydog.jpeg" summary="Shot through the nose charging an enemy soldier, Nemo crawled back to his wounded handler and lay on top of him to guard him until help arrived. He lost his right eye. His handler earned the Purple Heart and Bronze Star." />
                 <DogCard name="Stubby" branch="U.S. Army — WWI" img="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Sergeant_Stubby.jpg/400px-Sergeant_Stubby.jpg" summary="A stray smuggled to Europe, Stubby served in 17 battles, alerted soldiers to gas attacks, and captured a German spy. He became the first dog to receive a rank — Sergeant — from the U.S. armed forces." />
@@ -228,7 +228,7 @@ export default function VictoryPointe(){
                 <div>
                   <div className="text-xs text-slate-500 font-medium">Full Plaza Sponsorship</div>
                   <div className="text-2xl font-bold text-amber-700">~$200,000</div>
-                  <div className="text-xs text-slate-400">6 bronze dogs + fitness structure + site &amp; installation</div>
+                  <div className="text-xs text-slate-400">6 bronze sculptures + fitness structure + site &amp; installation</div>
                 </div>
                 <a href="/sponsors" className="shrink-0 rounded-lg bg-amber-500 text-white text-sm font-semibold px-6 py-3 hover:bg-amber-600 transition-colors">
                   Sponsor This Plaza →
@@ -241,7 +241,7 @@ export default function VictoryPointe(){
             <div>
               <div className="text-xs uppercase tracking-wide opacity-60">Stations 1–10 Memorials</div>
               <div className="text-2xl font-bold mt-1">$300,000</div>
-              <div className="text-xs opacity-60 mt-1">Bronze + granite per station</div>
+              <div className="text-xs opacity-60 mt-1">Bronze sculpture + granite per station</div>
             </div>
             <div>
               <div className="text-xs uppercase tracking-wide opacity-60">Stations 1–10 Equipment</div>
@@ -251,7 +251,7 @@ export default function VictoryPointe(){
             <div>
               <div className="text-xs uppercase tracking-wide opacity-60">Station 11 Honor Plaza</div>
               <div className="text-2xl font-bold mt-1">~$200,000</div>
-              <div className="text-xs opacity-60 mt-1">6 bronze dogs + equipment + site</div>
+              <div className="text-xs opacity-60 mt-1">6 bronze sculptures + equipment + site</div>
             </div>
             <div>
               <div className="text-xs uppercase tracking-wide opacity-60">Yellow Building — Intake Office</div>
