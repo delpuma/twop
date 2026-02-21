@@ -6,6 +6,7 @@ import Container from "../../components/Container";
 import SignatureForm from "../../components/SignatureForm";
 import ProposalSlider from "../../components/ProposalSlider";
 import dynamic from "next/dynamic";
+import EventCard2 from "../../components/EventCard2";
 const VictoryPointeMap = dynamic(() => import("../../components/VictoryPointeMap"), { ssr: false });
 
 type Stats = { supporters: number; sponsors: number; pledged: number; letters: number };
@@ -354,29 +355,32 @@ export default function VictoryPointe(){
         </Container>
       </section>
 
-      <section className="bg-white border-b border-slate-200">
-        <Container className="py-12">
-          <h2 className="text-2xl font-semibold">Community Programming</h2>
-          <p className="mt-3 text-slate-600 max-w-3xl">
+      <section className="bg-[#1a2416] border-y border-white/10">
+        <Container className="py-14">
+          <div className="flex items-center gap-3 mb-2"><span className="text-3xl">📅</span><span className="text-xs uppercase tracking-widest text-amber-400 font-semibold">Living Community Hub</span></div>
+          <h2 className="text-3xl font-black text-white">Community Programming</h2>
+          <p className="mt-3 text-white/60 max-w-3xl">
             Victory Pointe isn’t just a memorial corridor — it’s a living community hub. We’re planning a full calendar of recurring events that bring Clermont together, raise awareness for homeless veterans, and make Victory Pointe a destination people return to week after week.
           </p>
           <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            <EventCard day="Sundays" title="Military Bootcamp" emoji="🪖" description="Free outdoor bootcamp led by veteran trainers using the fitness corridor. Military-style PT open to all fitness levels — a taste of what our veterans trained to do, and a way to honor their discipline." />
-            <EventCard day="Saturdays" title="Yoga at the Waterfront" emoji="🧘" description="Guest yoga instructors lead free lakeside classes at Victory Pointe. Calm, community, and connection — a perfect counterpart to the strength training stations." />
-            <EventCard day="Friday Nights" title="Live Music by Veterans" emoji="🎸" description="Veteran musicians and local guest performers take the stage at Victory Pointe. Music heals — and this gives veteran artists a platform while drawing the community out every Friday night." />
-            <EventCard day="Annual" title="Warrior Project 5K" emoji="🏅" description="A community 5K that starts and ends at Victory Pointe, running through Clermont’s waterfront. Proceeds support veteran housing and services. Medals, vendors, and a post-race celebration at the Honor Plaza." />
-            <EventCard day="Monthly" title="Military Survival Skills" emoji="🧭" description="Hands-on classes teaching real military survival skills — navigation, first aid, emergency preparedness, fire-starting, and more. Open to families, scouts, and anyone who wants to learn what our veterans know." />
-            <EventCard day="Quarterly" title="Veteran Recognition Ceremony" emoji="🏆" description="A formal ceremony at the Honor Plaza recognizing local veterans, welcoming newly housed veterans into the program, and updating the community on our progress." />
-            <EventCard day="Monthly" title="Veteran Art &amp; Photography Exhibit" emoji="🎨" description="Rotating exhibits showcasing artwork and photography by veterans in our program. Art as therapy, and as a window into the veteran experience." />
-            <EventCard day="Ongoing" title="Adopt-a-Station Program" emoji="🤝" description="Local businesses, schools, and civic groups adopt a station — keeping it clean, hosting events there, and building a personal connection to the veteran it honors. Turns sponsors into stewards." />
-            <EventCard day="Annual" title="Clermont Cares Day" emoji="❤️" description="A full-day community service event where volunteers, businesses, and families come together at Victory Pointe — meals, mentorship, job fairs, and resource connections all in one place." />
+            <EventCard2 day="Sundays" title="Military Bootcamp" emoji="🪖" description="Free outdoor bootcamp led by veteran trainers using the fitness corridor. Military-style PT open to all fitness levels — a taste of what our veterans trained to do, and a way to honor their discipline." />
+            <EventCard2 day="Saturdays" title="Yoga at the Waterfront" emoji="🧘" description="Guest yoga instructors lead free lakeside classes at Victory Pointe. Calm, community, and connection — a perfect counterpart to the strength training stations." />
+            <EventCard2 day="Friday Nights" title="Live Music by Veterans" emoji="🎸" description="Veteran musicians and local guest performers take the stage at Victory Pointe. Music heals — and this gives veteran artists a platform while drawing the community out every Friday night." />
+            <EventCard2 day="Annual" title="Warrior Project 5K" emoji="🏅" description="A community 5K that starts and ends at Victory Pointe, running through Clermont’s waterfront. Proceeds support veteran housing and services. Medals, vendors, and a post-race celebration at the Honor Plaza." />
+            <EventCard2 day="Monthly" title="Military Survival Skills" emoji="🧭" description="Hands-on classes teaching real military survival skills — navigation, first aid, emergency preparedness, fire-starting, and more. Open to families, scouts, and anyone who wants to learn what our veterans know." />
+            <EventCard2 day="Quarterly" title="Veteran Recognition Ceremony" emoji="🏆" description="A formal ceremony at the Honor Plaza recognizing local veterans, welcoming newly housed veterans into the program, and updating the community on our progress." />
+            <EventCard2 day="Monthly" title="Veteran Art &amp; Photography Exhibit" emoji="🎨" description="Rotating exhibits showcasing artwork and photography by veterans in our program. Art as therapy, and as a window into the veteran experience." />
+            <EventCard2 day="Ongoing" title="Adopt-a-Station Program" emoji="🤝" description="Local businesses, schools, and civic groups adopt a station — keeping it clean, hosting events there, and building a personal connection to the veteran it honors. Turns sponsors into stewards." />
+            <EventCard2 day="Annual" title="Clermont Cares Day" emoji="❤️" description="A full-day community service event where volunteers, businesses, and families come together at Victory Pointe — meals, mentorship, job fairs, and resource connections all in one place." />
           </div>
-          <div className="mt-8 rounded-xl bg-[#4A5D3F] text-white p-6">
-            <div className="font-semibold text-lg">Want to volunteer, perform, teach, or sponsor an event?</div>
-            <p className="mt-1 text-sm text-white/80">We’re looking for yoga instructors, musicians, fitness trainers, survival skills instructors, and community partners to help bring this programming to life.</p>
-            <div className="mt-4 flex flex-wrap gap-3">
-              <a href="/volunteers" className="rounded-lg bg-white text-[#4A5D3F] text-sm font-semibold px-5 py-2 hover:bg-slate-100 transition-colors">Volunteer →</a>
-              <a href="/contact" className="rounded-lg bg-white/20 text-white text-sm font-semibold px-5 py-2 hover:bg-white/30 transition-colors">Partner With Us →</a>
+          <div className="mt-8 rounded-2xl bg-white/5 border border-white/10 p-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+            <div>
+              <div className="font-bold text-white text-lg">Want to volunteer, perform, teach, or sponsor an event?</div>
+              <p className="mt-1 text-sm text-white/60">We’re looking for yoga instructors, musicians, fitness trainers, survival skills instructors, and community partners to help bring this programming to life.</p>
+            </div>
+            <div className="flex flex-wrap gap-3 shrink-0">
+              <a href="/volunteers" className="rounded-lg bg-amber-500 text-white text-sm font-semibold px-5 py-2.5 hover:bg-amber-400 transition-colors">Volunteer →</a>
+              <a href="/contact" className="rounded-lg bg-white/10 border border-white/20 text-white text-sm font-semibold px-5 py-2.5 hover:bg-white/20 transition-colors">Partner With Us →</a>
             </div>
           </div>
         </Container>
