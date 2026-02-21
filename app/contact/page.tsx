@@ -15,30 +15,43 @@ export default function Contact(){
     <main>
 
       {/* HERO */}
-      <section className="bg-[#4A5D3F] text-white">
-        <Container className="py-14">
-          <h1 className="text-4xl font-bold tracking-tight">Let's talk.</h1>
-          <p className="mt-3 text-white/80 max-w-2xl text-lg">
-            Whether you want to sponsor a veteran, partner with us, volunteer, or just learn more — we want to hear from you. Our team responds within 48 hours.
-          </p>
+      <section className="relative bg-[#1a2416] text-white overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute w-[500px] h-[500px] rounded-full bg-[#4A5D3F] opacity-20 blur-[100px] -top-40 -right-20" />
+          <div className="absolute w-[350px] h-[350px] rounded-full bg-amber-700 opacity-15 blur-[80px] bottom-0 left-10" />
+          <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: "linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px)", backgroundSize: "60px 60px" }} />
+        </div>
+        <Container className="relative z-10 py-20">
+          <div className="max-w-3xl">
+            <span className="inline-flex items-center gap-2 rounded-full bg-amber-500/15 border border-amber-400/30 text-amber-300 text-xs font-semibold uppercase tracking-widest px-4 py-1.5 mb-5">
+              <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />
+              We respond within 48 hours
+            </span>
+            <h1 className="text-5xl md:text-6xl font-black tracking-tight leading-[1.05]">Let&apos;s talk.<br /><span className="text-amber-400">We&apos;re listening.</span></h1>
+            <p className="mt-6 text-lg text-white/70 leading-relaxed max-w-2xl">Whether you want to sponsor a veteran, partner with us, volunteer, or just learn more — we want to hear from you. Every message gets a personal response.</p>
+            <div className="mt-8 flex flex-wrap gap-4">
+              <a href="#contact-form" className="rounded-xl bg-amber-500 text-white font-bold px-8 py-4 hover:bg-amber-400 transition-all hover:scale-105 shadow-lg shadow-amber-500/20">Send a Message →</a>
+              <a href="tel:2127290453" className="rounded-xl bg-white/10 border border-white/20 text-white font-bold px-8 py-4 hover:bg-white/20 transition-all backdrop-blur-sm">(212) 729-0453</a>
+            </div>
+          </div>
         </Container>
       </section>
 
       {/* REASON CARDS */}
-      <section className="bg-slate-50 border-b border-slate-200">
+      <section className="bg-slate-900 border-b border-slate-800">
         <Container className="py-10">
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
             {[
-              { emoji: "🤝", title: "Partner With Us", desc: "Businesses, healthcare providers, employers, and civic organizations.", href: "#contact-form" },
-              { emoji: "🪖", title: "Sponsor a Veteran", desc: "Fund housing, healthcare, and workforce support directly.", href: "/sponsor" },
-              { emoji: "❤️", title: "Volunteer", desc: "Give your time and skills to change a veteran's life.", href: "/volunteer" },
-              { emoji: "🆘", title: "Need Help?", desc: "Are you a veteran who needs support? Start here.", href: "/get-help" },
-            ].map(({ emoji, title, desc, href }) => (
-              <a key={title} href={href} className="group rounded-xl bg-white border border-slate-200 p-5 hover:border-[#4A5D3F] hover:shadow-md transition-all flex flex-col gap-2">
+              { emoji: "🤝", title: "Partner With Us",  desc: "Businesses, healthcare providers, employers, and civic organizations.", href: "#contact-form",  color: "border-blue-500/40 hover:border-blue-400" },
+              { emoji: "🪖", title: "Sponsor a Veteran", desc: "Fund housing, healthcare, and workforce support directly.",             href: "/sponsor",      color: "border-amber-500/40 hover:border-amber-400" },
+              { emoji: "❤️",  title: "Volunteer",        desc: "Give your time and skills to change a veteran's life.",                href: "/volunteer",    color: "border-green-500/40 hover:border-green-400" },
+              { emoji: "🆘", title: "Need Help?",        desc: "Are you a veteran who needs support? Start here.",                    href: "/get-help",     color: "border-red-500/40 hover:border-red-400" },
+            ].map(({ emoji, title, desc, href, color }) => (
+              <a key={title} href={href} className={`group rounded-xl bg-white/5 border-2 ${color} p-5 hover:bg-white/10 transition-all flex flex-col gap-2`}>
                 <div className="text-3xl">{emoji}</div>
-                <div className="font-semibold text-slate-900 group-hover:text-[#4A5D3F] transition-colors">{title}</div>
-                <p className="text-sm text-slate-500 leading-snug">{desc}</p>
-                <div className="mt-auto text-sm font-semibold text-[#4A5D3F] opacity-0 group-hover:opacity-100 transition-opacity">Go →</div>
+                <div className="font-bold text-white group-hover:text-amber-300 transition-colors">{title}</div>
+                <p className="text-sm text-white/50 leading-snug">{desc}</p>
+                <div className="mt-auto text-sm font-semibold text-amber-400 opacity-0 group-hover:opacity-100 transition-opacity">Go →</div>
               </a>
             ))}
           </div>
@@ -101,13 +114,14 @@ export default function Contact(){
       </section>
 
       {/* BOTTOM STRIP */}
-      <section className="bg-slate-900 text-white">
-        <Container className="py-8 flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="text-sm text-slate-400">Warrior Outreach Project · 501(c)(3) Nonprofit · Clermont, Florida</div>
-          <div className="flex gap-4 text-sm">
-            <a href="/sponsor" className="text-amber-400 hover:underline">Sponsor a Vet</a>
-            <a href="/volunteer" className="text-amber-400 hover:underline">Volunteer</a>
-            <a href="/victory-pointe" className="text-amber-400 hover:underline">Victory Pointe</a>
+      <section className="bg-[#1a2416] text-white">
+        <Container className="py-12 text-center">
+          <h2 className="text-2xl font-black">Ready to make a difference?</h2>
+          <p className="mt-2 text-white/70 max-w-xl mx-auto">Sponsor a veteran, volunteer your time, or support Victory Pointe. Every action moves the mission forward.</p>
+          <div className="mt-6 flex flex-wrap gap-4 justify-center">
+            <a href="/sponsor" className="rounded-xl bg-amber-500 text-white font-bold px-7 py-3.5 hover:bg-amber-400 transition-all hover:scale-105">Sponsor a Veteran →</a>
+            <a href="/volunteer" className="rounded-xl bg-white/10 border border-white/20 text-white font-bold px-7 py-3.5 hover:bg-white/20 transition-all">Volunteer →</a>
+            <a href="/donate" className="rounded-xl border border-white/10 text-white/70 font-medium px-7 py-3.5 hover:text-white hover:border-white/30 transition-all">Donate</a>
           </div>
         </Container>
       </section>

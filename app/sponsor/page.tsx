@@ -13,16 +13,35 @@ export const metadata = buildMeta(
 export default function Sponsor(){
   return (
     <main>
-      <section className="bg-white border-b border-slate-200">
-        <Container className="py-14">
-          <h1 className="text-4xl font-semibold tracking-tight">Sponsorship &amp; Support Opportunities</h1>
-          <p className="mt-4 max-w-3xl text-slate-700 leading-relaxed">
-            Every dollar goes directly toward getting veterans off the street and into stable housing, healthcare, and a career. Whether you give $25 or $125,000 — you are part of the mission.
-          </p>
+      {/* HERO */}
+      <section className="relative bg-[#1a2416] text-white overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute w-[500px] h-[500px] rounded-full bg-[#4A5D3F] opacity-20 blur-[100px] -top-40 -right-20" />
+          <div className="absolute w-[350px] h-[350px] rounded-full bg-amber-700 opacity-15 blur-[80px] bottom-0 left-10" />
+          <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: "linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px)", backgroundSize: "60px 60px" }} />
+        </div>
+        <Container className="relative z-10 py-20">
+          <div className="max-w-3xl">
+            <span className="inline-flex items-center gap-2 rounded-full bg-amber-500/15 border border-amber-400/30 text-amber-300 text-xs font-semibold uppercase tracking-widest px-4 py-1.5 mb-5">
+              <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />
+              501(c)(3) · Tax-Deductible · 100% to Veterans
+            </span>
+            <h1 className="text-5xl md:text-6xl font-black tracking-tight leading-[1.05]">Invest in a veteran.<br /><span className="text-amber-400">Change a life forever.</span></h1>
+            <p className="mt-6 text-lg text-white/70 leading-relaxed max-w-2xl">Every dollar goes directly toward getting veterans off the street and into stable housing, healthcare, and a career. Whether you give $25 or $3,000,000 — you are part of the mission.</p>
+            <div className="mt-8 flex flex-wrap gap-4">
+              <a href="#sponsor-form" className="rounded-xl bg-amber-500 text-white font-bold px-8 py-4 hover:bg-amber-400 transition-all hover:scale-105 shadow-lg shadow-amber-500/20">Get Involved Today →</a>
+              <a href="/donate" className="rounded-xl bg-white/10 border border-white/20 text-white font-bold px-8 py-4 hover:bg-white/20 transition-all backdrop-blur-sm">Donate Now</a>
+            </div>
+            <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-4 border-t border-white/10 pt-8">
+              {[{v:"$2,800",l:"Per veteran/month"},{v:"9–12 mo",l:"To stable housing"},{v:"100%",l:"To veteran services"},{v:"501(c)(3)",l:"Tax-deductible"}].map(({v,l})=>(
+                <div key={l}><div className="text-2xl font-black text-amber-400">{v}</div><div className="mt-1 text-xs text-white/50">{l}</div></div>
+              ))}
+            </div>
+          </div>
         </Container>
       </section>
 
-      {/* ADOPT-A-VET */}
+      {/* GUIDING LIGHT */}
       <section className="bg-[#4A5D3F] text-white">
         <Container className="py-14">
           <div className="flex items-center gap-3 mb-2">
@@ -127,10 +146,11 @@ export default function Sponsor(){
       </section>
 
       {/* SPONSOR FORM */}
-      <section id="sponsor-form">
-        <Container className="py-12 grid gap-8 md:grid-cols-2">
+      <section id="sponsor-form" className="bg-slate-50 border-t border-slate-200">
+        <Container className="py-14 grid gap-8 md:grid-cols-2">
           <div>
-            <h2 className="text-2xl font-semibold">Ready to get involved?</h2>
+            <div className="text-xs uppercase tracking-widest text-[#4A5D3F] font-semibold mb-2">Let&apos;s Talk</div>
+            <h2 className="text-3xl font-bold">Ready to get involved?</h2>
             <p className="mt-3 text-slate-600 leading-relaxed">Fill out the form and our team will reach out within 48 hours to discuss the right opportunity for you — whether that's the Guiding Light Program, a station sponsorship, in-kind support, or volunteering.</p>
             <div className="mt-6 grid grid-cols-1 gap-3">
               {[

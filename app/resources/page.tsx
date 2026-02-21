@@ -110,40 +110,37 @@ export default function Resources(){
 
   return (
     <main>
-      {/* CRISIS BANNER */}
-      <section className="bg-red-600 text-white">
-        <Container className="py-6">
-          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-            <div>
-              <div className="text-xs uppercase tracking-widest font-semibold opacity-80 mb-1">🚨 In Crisis? Get Help Now</div>
-              <div className="text-2xl font-bold">Veterans Crisis Line — Call or text <span className="underline">988</span> then press 1</div>
-              <div className="text-sm opacity-90 mt-1">Available 24/7 for veterans, service members, and their families</div>
-            </div>
-            <div className="shrink-0 text-center">
-              <div className="text-sm opacity-80">Emergency Services</div>
-              <div className="text-3xl font-bold">911</div>
+      {/* HERO */}
+      <section className="relative bg-[#1a2416] text-white overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute w-[500px] h-[500px] rounded-full bg-[#4A5D3F] opacity-20 blur-[100px] -top-40 -right-20" />
+          <div className="absolute w-[350px] h-[350px] rounded-full bg-amber-700 opacity-15 blur-[80px] bottom-0 left-10" />
+          <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: "linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px)", backgroundSize: "60px 60px" }} />
+        </div>
+        <Container className="relative z-10 py-20">
+          <div className="max-w-3xl">
+            <span className="inline-flex items-center gap-2 rounded-full bg-amber-500/15 border border-amber-400/30 text-amber-300 text-xs font-semibold uppercase tracking-widest px-4 py-1.5 mb-5">
+              <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />
+              Free · Confidential · Always Available
+            </span>
+            <h1 className="text-5xl md:text-6xl font-black tracking-tight leading-[1.05]">Every resource<br /><span className="text-amber-400">veterans deserve.</span></h1>
+            <p className="mt-6 text-lg text-white/70 leading-relaxed max-w-2xl">Healthcare, housing, legal help, financial aid, and more — all in one place. Filter by category or search to find exactly what you need.</p>
+            <div className="mt-8 relative max-w-xl">
+              <span className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-lg">🔍</span>
+              <input type="text" placeholder="Search resources..." value={search} onChange={e => setSearch(e.target.value)}
+                className="w-full rounded-xl bg-white text-slate-900 pl-11 pr-4 py-3.5 text-sm focus:outline-none focus:ring-2 focus:ring-amber-400 shadow-lg" />
             </div>
           </div>
         </Container>
       </section>
 
-      {/* HERO */}
-      <section className="bg-[#4A5D3F] text-white">
-        <Container className="py-12">
-          <h1 className="text-4xl font-bold tracking-tight">Veteran Resources</h1>
-          <p className="mt-3 text-white/80 max-w-2xl">Everything you need — healthcare, housing, legal help, financial aid, and more. Filter by category or search to find exactly what you're looking for.</p>
-          <div className="mt-6 relative max-w-xl">
-            <span className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-lg">🔍</span>
-            <input
-              type="text"
-              placeholder="Search resources..."
-              value={search}
-              onChange={e => setSearch(e.target.value)}
-              className="w-full rounded-xl bg-white text-slate-900 pl-11 pr-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-amber-400"
-            />
-          </div>
+      {/* CRISIS STRIP */}
+      <div className="bg-red-600 text-white">
+        <Container className="py-3 flex flex-col sm:flex-row items-center justify-between gap-2">
+          <p className="text-sm font-semibold">🚨 Veterans Crisis Line — available 24/7 for veterans, service members, and their families.</p>
+          <a href="tel:988" className="shrink-0 rounded-lg bg-white text-red-600 font-bold text-sm px-5 py-2 hover:bg-red-50 transition-colors">Call 988 → Press 1</a>
         </Container>
-      </section>
+      </div>
 
       {/* FILTER TABS */}
       <section className="bg-white border-b border-slate-200 sticky top-0 z-10 shadow-sm">
@@ -208,13 +205,14 @@ export default function Resources(){
       </section>
 
       {/* BOTTOM CTA */}
-      <section className="bg-[#4A5D3F] text-white">
-        <Container className="py-10 flex flex-col md:flex-row items-center justify-between gap-6">
-          <div>
-            <div className="font-semibold text-lg">Can't find what you need?</div>
-            <p className="mt-1 text-white/80 text-sm max-w-xl">Our team can help connect you to the right resource. Reach out and we'll point you in the right direction.</p>
+      <section className="bg-[#1a2416] text-white">
+        <Container className="py-14 text-center">
+          <h2 className="text-2xl font-black">Can&apos;t find what you need?</h2>
+          <p className="mt-2 text-white/70 max-w-xl mx-auto">Our team can help connect you to the right resource. Reach out and we&apos;ll point you in the right direction.</p>
+          <div className="mt-6 flex flex-wrap gap-4 justify-center">
+            <a href="/contact" className="rounded-xl bg-amber-500 text-white font-bold px-7 py-3.5 hover:bg-amber-400 transition-all hover:scale-105">Contact Us →</a>
+            <a href="/get-help" className="rounded-xl bg-white/10 border border-white/20 text-white font-bold px-7 py-3.5 hover:bg-white/20 transition-all">I Need Help →</a>
           </div>
-          <a href="/contact" className="shrink-0 rounded-lg bg-white text-[#4A5D3F] font-semibold px-6 py-3 hover:bg-slate-100 transition-colors">Contact Us →</a>
         </Container>
       </section>
     </main>
