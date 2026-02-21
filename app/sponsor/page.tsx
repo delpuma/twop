@@ -132,11 +132,18 @@ export default function Sponsor(){
           <div>
             <h2 className="text-2xl font-semibold">Ready to get involved?</h2>
             <p className="mt-3 text-slate-600 leading-relaxed">Fill out the form and our team will reach out within 48 hours to discuss the right opportunity for you — whether that's Adopt-a-Vet, a station sponsorship, in-kind support, or volunteering.</p>
-            <div className="mt-6 space-y-3 text-sm text-slate-700">
-              <div className="flex gap-2"><span className="text-[#4A5D3F] font-bold">✓</span> 501(c)(3) — all donations are tax-deductible</div>
-              <div className="flex gap-2"><span className="text-[#4A5D3F] font-bold">✓</span> 100% of program funds go directly to veteran services</div>
-              <div className="flex gap-2"><span className="text-[#4A5D3F] font-bold">✓</span> Regular impact updates so you see exactly where your money goes</div>
-              <div className="flex gap-2"><span className="text-[#4A5D3F] font-bold">✓</span> Recognition options available at every level</div>
+            <div className="mt-6 grid grid-cols-1 gap-3">
+              {[
+                { icon: "🏛️", text: "501(c)(3) — all donations are tax-deductible" },
+                { icon: "💯", text: "100% of program funds go directly to veteran services" },
+                { icon: "📊", text: "Regular impact updates so you see exactly where your money goes" },
+                { icon: "🏅", text: "Recognition options available at every level" },
+              ].map(({ icon, text }) => (
+                <div key={text} className="flex items-center gap-3 rounded-lg bg-[#4A5D3F]/10 border border-[#4A5D3F]/20 px-4 py-3">
+                  <span className="text-xl shrink-0">{icon}</span>
+                  <span className="text-sm font-medium text-slate-800">{text}</span>
+                </div>
+              ))}
             </div>
           </div>
           <div className="rounded-xl border border-slate-200 bg-white p-6">
