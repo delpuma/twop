@@ -29,7 +29,7 @@ export default function Sponsor(){
             <span className="text-3xl">🪖</span>
             <span className="text-xs uppercase tracking-widest text-amber-300 font-semibold">Most Impactful Program</span>
           </div>
-          <h2 className="text-3xl font-semibold">Adopt-a-Vet</h2>
+          <h2 className="text-3xl font-semibold">Guiding Light Program</h2>
           <p className="mt-3 text-white/80 max-w-3xl leading-relaxed">
             Directly sponsor a veteran's stabilization journey. Your contribution covers housing, food, case management, healthcare navigation, and workforce support for one veteran for one month — or longer. This is the most direct way to change a life.
           </p>
@@ -74,7 +74,7 @@ export default function Sponsor(){
             />
           </div>
           <div className="mt-6 text-center">
-            <a href="#sponsor-form" className="inline-block rounded-lg bg-amber-500 text-white font-semibold px-8 py-3 hover:bg-amber-600 transition-colors">Adopt a Vet Today →</a>
+            <a href="#sponsor-form" className="inline-block rounded-lg bg-amber-500 text-white font-semibold px-8 py-3 hover:bg-amber-600 transition-colors">Join the Guiding Light Program →</a>
           </div>
         </Container>
       </section>
@@ -131,7 +131,7 @@ export default function Sponsor(){
         <Container className="py-12 grid gap-8 md:grid-cols-2">
           <div>
             <h2 className="text-2xl font-semibold">Ready to get involved?</h2>
-            <p className="mt-3 text-slate-600 leading-relaxed">Fill out the form and our team will reach out within 48 hours to discuss the right opportunity for you — whether that's Adopt-a-Vet, a station sponsorship, in-kind support, or volunteering.</p>
+            <p className="mt-3 text-slate-600 leading-relaxed">Fill out the form and our team will reach out within 48 hours to discuss the right opportunity for you — whether that's the Guiding Light Program, a station sponsorship, in-kind support, or volunteering.</p>
             <div className="mt-6 grid grid-cols-1 gap-3">
               {[
                 { icon: "🏛️", text: "501(c)(3) — all donations are tax-deductible" },

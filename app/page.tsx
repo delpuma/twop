@@ -141,7 +141,7 @@ export default async function Home(){
               </div>
             </div>
             <div className="rounded-2xl bg-[#4A5D3F] text-white p-8 space-y-5">
-              <div className="text-xs uppercase tracking-widest text-amber-400 font-semibold">Adopt-a-Vet Program</div>
+              <div className="text-xs uppercase tracking-widest text-amber-400 font-semibold">Guiding Light Program</div>
               <h3 className="text-2xl font-bold">Directly sponsor a veteran's journey to independence.</h3>
               <p className="text-white/70 text-sm leading-relaxed">Your contribution covers housing, food, case management, healthcare navigation, and workforce support for one veteran — for one month or longer.</p>
               <div className="space-y-3">
@@ -156,7 +156,7 @@ export default async function Home(){
                   </div>
                 ))}
               </div>
-              <Link href="/sponsor" className="block text-center rounded-xl bg-amber-500 text-white font-bold px-6 py-3 hover:bg-amber-400 transition-colors">Adopt a Vet Today →</Link>
+              <Link href="/sponsor" className="block text-center rounded-xl bg-amber-500 text-white font-bold px-6 py-3 hover:bg-amber-400 transition-colors">Join the Guiding Light Program →</Link>
             </div>
           </div>
         </Container>
