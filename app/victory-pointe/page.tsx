@@ -213,6 +213,34 @@ export default function VictoryPointe(){
         </Container>
       </section>
 
+      <section className="bg-white border-b border-slate-200">
+        <Container className="py-12">
+          <h2 className="text-2xl font-semibold">Community Programming</h2>
+          <p className="mt-3 text-slate-600 max-w-3xl">
+            Victory Pointe isn’t just a memorial corridor — it’s a living community hub. We’re planning a full calendar of recurring events that bring Clermont together, raise awareness for homeless veterans, and make Victory Pointe a destination people return to week after week.
+          </p>
+          <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            <EventCard day="Sundays" title="Military Bootcamp" emoji="🪖" description="Free outdoor bootcamp led by veteran trainers using the fitness corridor. Military-style PT open to all fitness levels — a taste of what our veterans trained to do, and a way to honor their discipline." />
+            <EventCard day="Saturdays" title="Yoga at the Waterfront" emoji="🧘" description="Guest yoga instructors lead free lakeside classes at Victory Pointe. Calm, community, and connection — a perfect counterpart to the strength training stations." />
+            <EventCard day="Friday Nights" title="Live Music by Veterans" emoji="🎸" description="Veteran musicians and local guest performers take the stage at Victory Pointe. Music heals — and this gives veteran artists a platform while drawing the community out every Friday night." />
+            <EventCard day="Annual" title="Warrior Project 5K" emoji="🏅" description="A community 5K that starts and ends at Victory Pointe, running through Clermont’s waterfront. Proceeds support veteran housing and services. Medals, vendors, and a post-race celebration at the Honor Plaza." />
+            <EventCard day="Monthly" title="Military Survival Skills" emoji="🧭" description="Hands-on classes teaching real military survival skills — navigation, first aid, emergency preparedness, fire-starting, and more. Open to families, scouts, and anyone who wants to learn what our veterans know." />
+            <EventCard day="Quarterly" title="Veteran Recognition Ceremony" emoji="🏆" description="A formal ceremony at the Honor Plaza recognizing local veterans, welcoming newly housed veterans into the program, and updating the community on our progress." />
+            <EventCard day="Monthly" title="Veteran Art &amp; Photography Exhibit" emoji="🎨" description="Rotating exhibits showcasing artwork and photography by veterans in our program. Art as therapy, and as a window into the veteran experience." />
+            <EventCard day="Ongoing" title="Adopt-a-Station Program" emoji="🤝" description="Local businesses, schools, and civic groups adopt a station — keeping it clean, hosting events there, and building a personal connection to the veteran it honors. Turns sponsors into stewards." />
+            <EventCard day="Annual" title="Clermont Cares Day" emoji="❤️" description="A full-day community service event where volunteers, businesses, and families come together at Victory Pointe — meals, mentorship, job fairs, and resource connections all in one place." />
+          </div>
+          <div className="mt-8 rounded-xl bg-[#4A5D3F] text-white p-6">
+            <div className="font-semibold text-lg">Want to volunteer, perform, teach, or sponsor an event?</div>
+            <p className="mt-1 text-sm text-white/80">We’re looking for yoga instructors, musicians, fitness trainers, survival skills instructors, and community partners to help bring this programming to life.</p>
+            <div className="mt-4 flex flex-wrap gap-3">
+              <a href="/volunteers" className="rounded-lg bg-white text-[#4A5D3F] text-sm font-semibold px-5 py-2 hover:bg-slate-100 transition-colors">Volunteer →</a>
+              <a href="/contact" className="rounded-lg bg-white/20 text-white text-sm font-semibold px-5 py-2 hover:bg-white/30 transition-colors">Partner With Us →</a>
+            </div>
+          </div>
+        </Container>
+      </section>
+
       <section className="bg-slate-50 border-y border-slate-200">
         <Container className="py-12">
           <h2 className="text-2xl font-semibold">Why Clermont?</h2>
@@ -267,6 +295,19 @@ function PartnerType({ label }:{ label: string }){
   return (
     <div className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm text-slate-700 flex items-center gap-2">
       <span className="text-[#4A5D3F] font-bold">✓</span> {label}
+    </div>
+  );
+}
+
+function EventCard({ day, title, emoji, description }:{ day: string; title: string; emoji: string; description: string }){
+  return (
+    <div className="rounded-xl border border-slate-200 bg-white p-6">
+      <div className="flex items-center gap-2 mb-1">
+        <span className="text-xl">{emoji}</span>
+        <span className="text-xs uppercase tracking-wide text-[#4A5D3F] font-semibold">{day}</span>
+      </div>
+      <div className="font-semibold text-base mb-2">{title}</div>
+      <p className="text-sm text-slate-600 leading-relaxed">{description}</p>
     </div>
   );
 }
